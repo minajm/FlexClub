@@ -38,7 +38,7 @@ include_once('connect.php');
 <div class="navb">
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
 
-        <a class="navbar-brand" href="http://localhost/hassanProject">
+        <a class="navbar-brand" href="./index2.php">
             <img src="./image/logo.png" class="img-logo" alt="header logo">
         </a>
 
@@ -54,7 +54,7 @@ include_once('connect.php');
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/hassanProject/class.php">Classes</a>
+                    <a class="nav-link" href="./class.php">Classes</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -65,10 +65,15 @@ include_once('connect.php');
                         <?php
                         session_start();
 
+
                         if (isset($_SESSION['status']) && $_SESSION['status'] !== 1) {
                             echo '
+                                <a class="nav-link text-danger" href="./logout.php"></a>
+                        ';
+                        } else {
+                            echo '
                                   <a class="dropdown-item" href="./registration.php">Register</a>
-                            ';
+                        ';
                         }
                         ?>
                         <a class="dropdown-item" href="./membership.php">Membership</a>
