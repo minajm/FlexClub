@@ -57,16 +57,26 @@ include_once('connect.php');
                     <a class="nav-link" href="http://localhost/hassanProject/class.php">Classes</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Registration
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./registration.php">Register</a>
+                        <?php
+                        session_start();
+
+                        if (isset($_SESSION['status']) && $_SESSION['status'] !== 1) {
+                            echo '
+                                  <a class="dropdown-item" href="./registration.php">Register</a>
+                            ';
+                        }
+                        ?>
                         <a class="dropdown-item" href="./membership.php">Membership</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -76,14 +86,7 @@ include_once('connect.php');
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/hassanProject/membership.php">Membership</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/hassanProject/testimonial.php">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/hassanProject/contact_us.php">Contact us</a>
+                    <a class="nav-link" href="./contact_us.php">Contact us</a>
                 </li>
 
                 <?php
@@ -92,16 +95,13 @@ include_once('connect.php');
                 if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
                     echo '
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="/hassanProject/logout.php">Logout</a>
+                                <a class="nav-link text-danger" href="./logout.php">Logout</a>
                             </li>
                         ';
                 } else {
                     echo '
                             <li class="nav-item">
-                                <a class="nav-link" href="/hassanProject/login.php">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/hassanProject/registration.php">Register</a>
+                                <a class="nav-link" href="./login.php">Login</a>
                             </li>
                         ';
                 }
@@ -110,8 +110,8 @@ include_once('connect.php');
                 if (isset($_SESSION['role']) && $_SESSION['role'] == 1) { // admin
                     echo '
                         <li class="nav-item">
-                                <a class="nav-link text-info" href="/hassanProject/admin_edit_users.php">DASHBOARD</a>
-                            </li>
+                                <a class="nav-link text-info" href="./admin_edit_users.php">DASHBOARD</a>
+                        </li>
                     ';
                 }
 
@@ -122,6 +122,3 @@ include_once('connect.php');
     </nav>
 </div>
 <!-- End Header -->
-<div class="mt-3">
-
-</div>
