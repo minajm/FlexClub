@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/header" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bcnEjAJxXnXY1R34vOnIbBRM2s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="" />
+      <created>1588940141140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588940141140</updated>
+      <workItem from="1588940147055" duration="583000" />
+      <workItem from="1588943371282" duration="8603000" />
+      <workItem from="1590173730096" duration="69000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="228" y="73" key="#CLI_Interpreters" timestamp="1588946007397">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="228" y="73" key="#CLI_Interpreters/0.23.1280.777@0.23.1280.777" timestamp="1588946007397" />
+    <state x="308" y="61" key="#PHP" timestamp="1588946008925">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="308" y="61" key="#PHP/0.23.1280.777@0.23.1280.777" timestamp="1588946008925" />
+    <state x="428" y="197" key="#Web_Browsers" timestamp="1588940258803">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="428" y="197" key="#Web_Browsers/0.23.1280.777@0.23.1280.777" timestamp="1588940258803" />
+    <state x="240" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588944160578">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="240" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1588944160578" />
+    <state x="366" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588960287751">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="366" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1588960287751" />
+    <state width="832" height="184" key="GridCell.Tab.0.bottom" timestamp="1588946051990">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="832" height="184" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1588946051990" />
+    <state width="832" height="184" key="GridCell.Tab.0.center" timestamp="1588946051989">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="832" height="184" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1588946051989" />
+    <state width="832" height="184" key="GridCell.Tab.0.left" timestamp="1588946051989">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="832" height="184" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1588946051989" />
+    <state width="832" height="184" key="GridCell.Tab.0.right" timestamp="1588946051990">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="832" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1588946051990" />
+    <state x="141" y="50" key="SettingsEditor" timestamp="1589024984543">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1589024984543" />
+    <state x="388" y="152" width="566" height="461" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1588944209325">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="388" y="152" width="566" height="461" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.23.1280.777@0.23.1280.777" timestamp="1588944209325" />
+    <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1588943741118">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.23.1280.777@0.23.1280.777" timestamp="1588943741118" />
+    <state x="305" y="186" key="run.anything.popup" timestamp="1588946018043">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="305" y="186" key="run.anything.popup/0.23.1280.777@0.23.1280.777" timestamp="1588946018043" />
+  </component>
+</project>
