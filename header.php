@@ -35,6 +35,7 @@ include_once('connect.php');
 
 
 <!-- Start Header -->
+<div class="container">
 <div class="navb">
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
 
@@ -125,5 +126,6 @@ include_once('connect.php');
         </div>
 
     </nav>
+</div>
 </div>
 <!-- End Header -->

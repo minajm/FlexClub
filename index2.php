@@ -3,37 +3,61 @@ include_once('header.php');
 ?>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="image">
-                        <img src="image/image1.jpg" class="img-fluid" alt="Responsive image">
+        <!-- The Carousel is a slideshow for cycling through elements. -->
+        <!-- .carousel	Creates a carousel and .slide Adds a CSS transition and animation effect when sliding from one item to the next. -->
+        <!-- Center an element with the .mx-auto class (adds margin-left and margin-right: auto) -->
+        <div id="fitness" class="carousel slide mx-auto" data-ride="carousel">
+            <!-- .carousel-indicators	Adds indicators for the carousel.
+            These are the little dots at the bottom of each slide
+            (which indicates how many slides there are in the carousel, and which slide the user are currently viewing) -->
+            <ul class="carousel-indicators">
+                <li data-target="#fitness" data-slide-to="0" class="active"></li>
+                <li data-target="#fitness" data-slide-to="1"></li>
+                <li data-target="#fitness" data-slide-to="2"></li>
+            </ul>
+            <!-- .carousel-inner Adds slides to the carousel -->
+            <div class="carousel-inner">
+                <!-- .carousel-item	Specifies the content of each slide -->
+                <div class="carousel-item active">
+                    <img src="./image/anastase-maragos-FP7cfYPPUKM-unsplash.jpg" alt="1">
+                    <!-- Add elements inside <div class="carousel-caption"> within each <div class="carousel-item"> to create a caption for each slide -->
+                    <div class="carousel-caption">
+                        <!-- use .header class to define specific font for header  -->
+                        <h3>Los Angeles</h3>
+                        <!-- use this class to define different font size for different screen -->
+                        <p>We had such a great time in LA!</p>
                     </div>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="jumbotron jumbotron-fluid">
-                            <div class="container">
-                                <h1 class="display-4">Feature 1</h1>
-                                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space
-                                    of
-                                    its parent.</p>
-                            </div>
-                        </div>
+                <!-- the same as above -->
+                <div class="carousel-item">
+                    <img src="./image/cathy-pham-3jAN9InapQI-unsplash.jpg" alt="2">
+                    <div class="carousel-caption">
+                        <h3>Chicago</h3>
+                        <p>Thank you, Chicago!</p>
                     </div>
-
-                    <div class="col-md-6">
-                        <div class="jumbotron jumbotron-fluid">
-                            <div class="container">
-                                <h1 class="display-4">Feature 2</h1>
-                                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space
-                                    of
-                                    its parent.</p>
-                            </div>
-                        </div>
+                </div>
+                <!-- the same as above -->
+                <div class="carousel-item">
+                    <img src="./image/geert-pieters-0Z-r591z3DI-unsplash.jpg" alt="3">
+                    <div class="carousel-caption">
+                        <h3>New York</h3>
+                        <p>We love the Big Apple!</p>
                     </div>
                 </div>
             </div>
+            <!-- .carousel-control-prev	Adds a left (previous) button to the carousel, which allows the user to go back between the slides -->
+            <a class="carousel-control-prev" href="#fitness" data-slide="prev">
+                <!-- .carousel-control-prev-icon	Used together with .carousel-control-prev to create a "previous" button -->
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <!-- .carousel-control-next	Adds a right (next) button to the carousel, which allows the user to go forward between the slides -->
+            <a class="carousel-control-next" href="#fitness" data-slide="next">
+                <!-- .carousel-control-next-icon	Used together with .carousel-control-next to create a "next" button -->
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        <div class="row">
+
             <div class="col-md-3">
                 <h5 class="text-center">Login Member</h5>
                 <!-- Login Form -->

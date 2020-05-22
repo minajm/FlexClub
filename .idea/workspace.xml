@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/image/anastase-maragos-FP7cfYPPUKM-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cathy-pham-3jAN9InapQI-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/geert-pieters-0Z-r591z3DI-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/photo-1556817411-31ae72fa3ea0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/scott-webb-5IsdIqwwNP4-unsplash.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,17 +52,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
@@ -72,7 +80,7 @@
       <workItem from="1588940147055" duration="583000" />
       <workItem from="1588943371282" duration="8603000" />
       <workItem from="1590173730096" duration="69000" />
-      <workItem from="1590178123852" duration="2403000" />
+      <workItem from="1590178123852" duration="5217000" />
     </task>
     <servers />
   </component>
@@ -128,10 +136,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="832" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1588946051990" />
-    <state x="141" y="50" key="SettingsEditor" timestamp="1589024984543">
+    <state x="141" y="50" key="SettingsEditor" timestamp="1590189431251">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1589024984543" />
+    <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1590189431251" />
     <state x="388" y="152" width="566" height="461" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1588944209325">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
