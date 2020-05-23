@@ -11,7 +11,7 @@ include_once('connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- title -->
-    <title>Flex Club Gym</title>
+    <title>Flex Club</title>
 
     <!--file of CSS-->
     <link rel="stylesheet" href="./css/style.css" type="text/css">

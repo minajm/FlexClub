@@ -22,26 +22,42 @@ include_once('header.php');
                     <img src="./image/anastase-maragos-FP7cfYPPUKM-unsplash.jpg" alt="1">
                     <!-- Add elements inside <div class="carousel-caption"> within each <div class="carousel-item"> to create a caption for each slide -->
                     <div class="carousel-caption">
-                        <!-- use .header class to define specific font for header  -->
-                        <h3>Los Angeles</h3>
-                        <!-- use this class to define different font size for different screen -->
-                        <p>We had such a great time in LA!</p>
+                        <h1>Flex Club</h1>
+                        <a href="tel:+353-061-4486165" class=" m-2">
+                            <h3>
+                                Tel:0614486165
+                            </h3>
+                        </a>
+                        <h2>Dublin city center</h2>
+                        <a class="btn btn-light m-4 h3" href="./registration.php" role="button">Join Know</a>
                     </div>
                 </div>
                 <!-- the same as above -->
                 <div class="carousel-item">
                     <img src="./image/cathy-pham-3jAN9InapQI-unsplash.jpg" alt="2">
                     <div class="carousel-caption">
-                        <h3>Chicago</h3>
-                        <p>Thank you, Chicago!</p>
+                        <h1>Flex Club</h1>
+                        <a href="tel:+353-061-4486165" class=" m-2">
+                            <h3>
+                                Tel:0614486165
+                            </h3>
+                        </a>
+                        <h2>Dublin city center</h2>
+                        <a class="btn btn-light m-4 h3" href="./registration.php" role="button">Join Know</a>
                     </div>
                 </div>
                 <!-- the same as above -->
                 <div class="carousel-item">
                     <img src="./image/geert-pieters-0Z-r591z3DI-unsplash.jpg" alt="3">
                     <div class="carousel-caption">
-                        <h3>New York</h3>
-                        <p>We love the Big Apple!</p>
+                        <h1>Flex Club</h1>
+                        <a href="tel:+353-061-4486165" class=" m-2">
+                            <h3>
+                                Tel:0614486165
+                            </h3>
+                        </a>
+                        <h2>Dublin city center</h2>
+                        <a class="btn btn-light m-4 h3" href="./registration.php" role="button">Join Know</a>
                     </div>
                 </div>
             </div>
