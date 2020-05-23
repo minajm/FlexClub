@@ -23,41 +23,41 @@ include_once('header.php');
                     <!-- Add elements inside <div class="carousel-caption"> within each <div class="carousel-item"> to create a caption for each slide -->
                     <div class="carousel-caption">
                         <h1>Flex Club</h1>
-                        <a href="tel:+353-061-4486165" class="carousel-tel m-2">
-                            <h3>
+                        <a href="tel:+353-061-4486165" class=" m-2 text-decoration-none text-light">
+                            <h3 >
                                 Tel:0614486165
                             </h3>
                         </a>
                         <h2>Dublin city center</h2>
-                        <a class="btn btn-dark m-4 h3" href="./registration.php" role="button">Join Know</a>
+                        <a class="btn btn-dark btn-lg m-4 h3" href="./registration.php" role="button">Join Know</a>
                     </div>
                 </div>
                 <!-- the same as above -->
                 <div class="carousel-item">
-                    <img src="./image/cathy-pham-3jAN9InapQI-unsplash.jpg" alt="2">
+                    <img src="./image/photo-1556817411-31ae72fa3ea0.jpeg" alt="2">
                     <div class="carousel-caption">
                         <h1>Flex Club</h1>
-                        <a href="tel:+353-061-4486165" class="carousel-tel m-2">
+                        <a href="tel:+353-061-4486165" class=" m-2 text-decoration-none text-light">
                             <h3>
                                 Tel:0614486165
                             </h3>
                         </a>
                         <h2>Dublin city center</h2>
-                        <a class="btn btn-light m-4 h3" href="./registration.php" role="button">Join Know</a>
+                        <a class="btn btn-dark btn-lg m-4 h3" href="./registration.php" role="button">Join Know</a>
                     </div>
                 </div>
                 <!-- the same as above -->
                 <div class="carousel-item">
-                    <img src="./image/geert-pieters-0Z-r591z3DI-unsplash.jpg" alt="3">
+                    <img src="./image/scott-webb-5IsdIqwwNP4-unsplash.jpg" alt="3">
                     <div class="carousel-caption">
                         <h1>Flex Club</h1>
-                        <a href="tel:+353-061-4486165" class="carousel-tel m-2">
+                        <a href="tel:+353-061-4486165" class=" m-2 text-decoration-none text-light">
                             <h3>
                                 Tel:0614486165
                             </h3>
                         </a>
                         <h2>Dublin city center</h2>
-                        <a class="btn btn-light m-4 h3" href="./registration.php" role="button">Join Know</a>
+                        <a class="btn btn-dark btn-lg m-4 h3" href="./registration.php" role="button">Join Know</a>
                     </div>
                 </div>
             </div>
@@ -72,58 +72,60 @@ include_once('header.php');
                 <span class="carousel-control-next-icon"></span>
             </a>
         </div>
-        <p class="h3 mt-4 mb-4">
+        <p class="h4 mt-4 mb-4 text-secondary">
             New Classes
         </p>
-        <div class="card-deck">
+        <div class="card-deck ">
             <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-footer">
-                    <h5 class="card-title">Card title</h5>
+                <img class="card-img-top" src="./image/BoxFit.jpg" alt="Box Fit">
+                <div class="card-footer d-flex justify-content-center">
+                    <h5 class="card-title text-secondary">Box Fit</h5>
                 </div>
 
             </div>
             <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-footer">
-                    <h5 class="card-title">Card title</h5>
+                <img class="card-img-top" src="./image/yog.jpg" alt="Yoga">
+                <div class="card-footer d-flex justify-content-center">
+                    <h5 class="card-title text-secondary" ">Yogalates</h5>
                 </div>
 
             </div>
             <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-footer">
-                    <h5 class="card-title">Card title</h5>
+                <img class="card-img-top" src="./image/streetDance.jpg" alt="Street Dance">
+                <div class="card-footer d-flex justify-content-center">
+                    <h5 class="card-title text-secondary">Street Dance</h5>
                 </div>
             </div>
         </div>
         <a class="btn btn-dark m-5 h3 d-flex justify-content-center" href="./class.php" role="button">More Classes</a>
 
-        <p class="h3 mt-4 mb-4">
+        <p class="h4 mt-4 mb-4 text-secondary">
             Offers
         </p>
-        <div class="card mb-3" style="max-width: 1000px;">
+        <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="..." class="card-img" alt="...">
+                    <img src="./image/offer1.jpg" class="card-img mh-50 " alt="Student Offer">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title text-secondary"">One week free</h5>
+                        <p class="card-text text-dark">Are you student in Dublin? <br>
+                            We have an opportunity for you <br>
+                            You can join us and get one week free !!!!!</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card mb-3" style="max-width: 1000px;">
+        <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="..." class="card-img" alt="...">
+                    <img src="./image/offer2.jpg" class="card-img" alt="Offer">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title text-secondary">Free Gift</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
@@ -131,31 +133,31 @@ include_once('header.php');
             </div>
         </div>
 
-        <p class="h3 mt-4 mb-4">
+        <p class="h4 mt-4 mb-4 text-secondary">
             Events
         </p>
-        <div class="card mb-3" style="max-width: 1000px;">
+        <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="..." class="card-img" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title text-secondary"">Card title</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card mb-3" style="max-width: 1000px;">
+        <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="..." class="card-img" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title text-secondary">Card title</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>

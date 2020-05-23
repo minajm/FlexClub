@@ -37,10 +37,10 @@ include_once('connect.php');
 <!-- Start Header -->
 <div class="container">
 <div class="navb">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
-
-        <a class="navbar-brand" href="./index2.php">
-            <img src="./image/logo.png" class="img-logo" alt="header logo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent static-top">
+        <!-- Brand/logo -->
+        <a class="navbar-brand text-secondary h1 font-weight-bold mt-1" href="./index2.php">
+            FLEX CLUB
         </a>
 
 
