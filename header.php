@@ -107,7 +107,7 @@ include_once('connect.php');
                 } else {
                     echo '
                             <li class="nav-item">
-                                <a class="nav-link" href="./login.php">Login</a>
+                                <a class="nav-link" href="./login.php" >Login</a>
                             </li>
                         ';
                 }
