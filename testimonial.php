@@ -4,8 +4,8 @@ include_once('header.php');
     <div class="container">
             <div class="row bg-light pb-5 pt-5 mb-5">
                 <div class="col text-center">
-                    <h2>Testimonial</h2>
-                    <p>In this page you can find customer review <br>
+                    <h2 class="text-dark">Testimonial</h2>
+                    <p class="text-secondary">In this page you can find customer review <br>
                         This is our pleasure to here your review about our classes, our trainers and this club
                     <br>If you are a member of this club you can add your opinion.</p>
                 </div>
@@ -20,7 +20,7 @@ include_once('header.php');
                             ?>
                             <div class="Testimonial bg-light">
                                 <img src="./image/user.png" alt="Avatar" style="width:90px">
-                                <p class="card-text text-dark"><?php echo $row['review_body'] ?></p>
+                                <p class="card-text text-dark"><?php echo $row['reviewer_name'] ?></p>
                                 <p class="card-text"><small class="text-muted"><?php echo $row['review_body'] ?></small></p>
                             </div>
                             <?php
