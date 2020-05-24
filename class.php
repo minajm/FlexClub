@@ -2,7 +2,6 @@
 include_once('header.php');
 ?>
 
-
     <div class="container">
         <div class="row bg-light pb-5 pt-5 mb-3">
             <div class="col text-center">
