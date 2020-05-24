@@ -2,10 +2,15 @@
 include_once('header.php');
 ?>
     <div class="container">
-        <h2 class="text-center mt-2">Customer Reviews</h2>
-        <div class="Features" style="margin-top: 20px;">
-            <div class="card-deck">
-                <?php
+            <div class="row bg-light pb-5 pt-5 mb-5">
+                <div class="col text-center">
+                    <h2>Testimonial</h2>
+                    <p>In this page you can find customer review <br>
+                        This is our pleasure to here your review about our classes, our trainers and this club
+                    <br>If you are a member of this club you can add your opinion.</p>
+                </div>
+            </div>
+            <?php
                 $sql = "SELECT * FROM testimonial where approved_by_admin =1 order by id desc limit 2 ";
 
                 $result = mysqli_query($connection, $sql);
@@ -13,12 +18,12 @@ include_once('header.php');
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             ?>
-                            <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $row['reviewer_name'] ?></h5>
-                                <p class="card-text"><?php echo $row['review_body'] ?></p>
+                            <div class="Testimonial bg-light">
+                                <img src="./image/user.png" alt="Avatar" style="width:90px">
+                                <p class="card-text text-dark"><?php echo $row['review_body'] ?></p>
+                                <p class="card-text"><small class="text-muted"><?php echo $row['review_body'] ?></small></p>
                             </div>
-                            </div><?php
+                            <?php
                         }
                     } else {
                         // no testimonials
@@ -33,26 +38,24 @@ include_once('header.php');
 
                 }
                 ?>
-
-                <div class="card">
-                    <div class="card-body">
-                        <form method="get" action="testimonial_add.php">
-                            <div class="form-group">
-                                <label>
-                                    <input type="text" name="rev_name" class="form-control" placeholder="Name">
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label>
+        <div class="card">
+            <div class="card-body">
+                <form method="get" action="testimonial_add.php">
+                    <div class="form-group">
+                        <label>
+                            <input type="text" name="rev_name" class="form-control" placeholder="Name">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
                                     <textarea name="rev_body" class="form-control"
                                               placeholder="write a review here:"></textarea>
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-dark btn-block">submit</button>
-                        </form>
+                        </label>
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-dark btn-block">submit</button>
+                </form>
             </div>
+        </div>
         </div>
     </div>
 <?php

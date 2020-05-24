@@ -16,7 +16,7 @@ function printForm()
   <div class="card-body px-lg-5 pt-0">
 
     <!-- Form -->
-    <form class="text-center mt-4"  action="#!">
+    <form class="text-center mt-4" method="POST" action="#!">
 
       <!-- Email -->
       <div class="md-form">
