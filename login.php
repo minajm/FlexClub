@@ -3,26 +3,54 @@ include_once('header.php');
 function printForm()
 {
     echo '
-        <div class="container mt-4" >
-        <div class="col-md-6 offset-md-3" style="border: #3b424d solid 1px">
-            <h1 class="text-center" style="color: chocolate;">Member Login</h1>
-            <form method="POST" action="">
-                <div class="form-group">
-                    <label for="user-email">Email</label>
-                    <input type="text" name="user_email" class="form-control" id="user-email" placeholder="Email">
-                </div>
+<!-- Default form login -->
+<div class="container  d-flex justify-content-center">
+<!-- Material form login -->
+<div class="card w-50 m-5">
 
-                <div class="form-group">
-                    <label for="user-password">Password</label>
-                    <input type="password" name="user_password" class="form-control" id="user-password"
-                           placeholder="User password">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
-            </form>
-            <br>
-            <h4 class="text-center">Not a member? <a href="http://localhost/hassanProject/registration.php">Register here</a></h4>
-        </div>
-    </div>
+  <h5 class="card-header  bg-light info-color white-text text-center py-4">
+    <strong>Sign in</strong>
+  </h5>
+
+  <!--Card content-->
+  <div class="card-body px-lg-5 pt-0">
+
+    <!-- Form -->
+    <form class="text-center mt-4"  action="#!">
+
+      <!-- Email -->
+      <div class="md-form">
+        <input type="email" id="materialLoginFormEmail" class="form-control">
+        <label for="materialLoginFormEmail">E-mail</label>
+      </div>
+
+      <!-- Password -->
+      <div class="md-form">
+        <input type="password" id="materialLoginFormPassword" class="form-control">
+        <label for="materialLoginFormPassword">Password</label>
+      </div>
+
+
+      <!-- Sign in button -->
+      <button class="btn btn-dark btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+
+      <!-- Register -->
+      <p>Not a member?
+        <a href="./registration.php">Register</a>
+      </p>
+
+    </form>
+    <!-- Form -->
+
+  </div>
+
+</div>
+<!-- Material form login -->
+
+
+</div>
+
+<!-- Default form login -->        
     ';
 }
 

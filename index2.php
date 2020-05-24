@@ -29,7 +29,7 @@ include_once('header.php');
                             </h3>
                         </a>
                         <h2>Dublin city center</h2>
-                        <a class="btn btn-dark btn-lg m-4 h3" href="./registration.php" role="button">Join Know</a>
+                        <a class="btn btn-dark btn-lg m-4 h3" href="./registration.php" role="button">Join Now</a>
                     </div>
                 </div>
                 <!-- the same as above -->
@@ -139,12 +139,13 @@ include_once('header.php');
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="..." class="card-img" alt="...">
+                    <img src="./image/event1.jpg" class="card-img" alt="Street dance event">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title text-secondary"">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title text-secondary"">September Event</h5>
+                        <p class="card-text text-dark">Do you like street dance? <br>We have a big event at the end of summer.<br>Join us and enjoy it
+                            <br>Location: Stephen Green Park<br> Date & Time: 10 September 11Am to 4Pm</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
@@ -153,18 +154,18 @@ include_once('header.php');
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="..." class="card-img" alt="...">
+                    <img src="./image/event2.jpg" class="card-img" alt="healthy food workshop">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title text-secondary">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title text-secondary">Healthy Food Workshop</h5>
+                        <p class="card-text">This i</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="btn btn-dark m-5 h3 d-flex justify-content-center " href="./class.php" role="button">Join Now</a>
+        <a class="btn btn-dark m-5 h3 d-flex justify-content-center " href="./registration.php.php" role="button">Join Now</a>
 
 
 
