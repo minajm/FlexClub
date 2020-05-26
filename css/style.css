@@ -30,6 +30,7 @@ img{
     margin: 16px 0
 }
 
+
 .Testimonial::after {
     content: "";
     clear: both;
@@ -52,6 +53,43 @@ img{
         text-align: center;
     }
     .Testimonial img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
+
+/*********registration*****************************/
+.fee {
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+}
+
+
+.fee::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.fee img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.fee span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+    .fee {
+        text-align: center;
+    }
+    .fee img {
         margin: auto;
         float: none;
         display: block;

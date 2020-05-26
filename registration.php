@@ -24,14 +24,75 @@ function validate_email($email)
 function printForm()
 {
     echo '
-
           <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Member Registration</h1>
+                <div class="row bg-light pb-5 pt-5 mb-5">
+                     <div class="col text-center">
+                            <h2 class="text-dark">Registration</h2>
+                            <p class="text-secondary">In this page you can find customer review <br>
+                                This is our pleasure to here your review about our classes, our trainers and this club
+                                <br>If you are a member of this club you can add your opinion.</p>
+                     </div>
+                </div>
+                <form method="POST" action="">
+                <div class="form-group">
+                <label for="exampleFormControlSelect1">Choose Fee</label>
+                <div class="card-deck">
+                    <div class="card">
+                    <div class="card-header">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                             Professional
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Enterprise
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                            <label class="form-check-label" for="exampleRadios3">
+                                    Premium
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <form method="POST" action="">
+                <label class="mt-3" for="exampleFormControlSelect1">Choose Classes</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Gym & Swimming pool </option>
+                    <option>Push and lift</option>
+                    <option>Box fit</option>
+                    <option>Yogalates</option>
+                    <option>Meditation & Relaxation</option>
+                    <option>Mind fullness</option>
+                    <option>Ballet</option>
+                    <option>Street Dance</option>
+                </select>
+            </div>
+         
 
             <div class="row">
                 <div class="col-md-4">

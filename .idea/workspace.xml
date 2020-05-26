@@ -21,14 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_edit_index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_edit_index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_edit_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_edit_users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard_sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard_sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/adminPanel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_class_details_edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_edit_index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_registration_edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_testimonial_manage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +71,16 @@
       <recent name="$PROJECT_DIR$/image" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="registration.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/registration.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.registration.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -88,7 +96,7 @@
       <workItem from="1590173730096" duration="69000" />
       <workItem from="1590178123852" duration="43983000" />
       <workItem from="1590430971327" duration="2918000" />
-      <workItem from="1590517590362" duration="5795000" />
+      <workItem from="1590517590362" duration="9990000" />
     </task>
     <servers />
   </component>
@@ -132,6 +140,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="373" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1590272850299" />
+    <state x="326" y="102" key="#registration.php" timestamp="1590536233284">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="326" y="102" key="#registration.php/0.0.1280.800@0.0.1280.800" timestamp="1590536233284" />
     <state width="832" height="184" key="GridCell.Tab.0.bottom" timestamp="1588946051990">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
