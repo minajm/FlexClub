@@ -100,8 +100,15 @@ include_once('header.php');
         <a class="btn btn-dark m-5 h3 d-flex justify-content-center" href="./class.php" role="button">More Classes</a>
 
         <p class="h4 mt-4 mb-4 text-secondary">
-            Offers
+            Features Box
         </p>
+
+        <?php
+          $features = mysqli_fetch_all($connection->query("select * from home;"), MYSQLI_ASSOC);
+
+          foreach ($features as $feature) {
+        ?>
+
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
@@ -109,15 +116,25 @@ include_once('header.php');
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title text-secondary"">One week free</h5>
-                        <p class="card-text text-dark">Are you student in Dublin? <br>
-                            We have an opportunity for you <br>
-                            You can join us and get one week free !!!!!</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 class="card-title text-secondary"">
+                            <?= $feature['title']; ?>
+                        </h5>
+                        <p class="card-text text-dark">
+                            <?= $feature['description']; ?>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Last updated 3 mins ago
+                            </small>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
+          <?php } ?>
+
+
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">

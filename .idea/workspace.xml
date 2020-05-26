@@ -20,14 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/adminPanel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin_class_details_edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin_edit_index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin_registration_edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin_testimonial_manage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/classes/aqary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_edit_index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_edit_index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_edit_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_edit_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard_sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard_sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,12 +63,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/image" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/image" />
       <recent name="$PROJECT_DIR$/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/image" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -83,7 +87,8 @@
       <workItem from="1588943371282" duration="8603000" />
       <workItem from="1590173730096" duration="69000" />
       <workItem from="1590178123852" duration="43983000" />
-      <workItem from="1590430971327" duration="2820000" />
+      <workItem from="1590430971327" duration="2918000" />
+      <workItem from="1590517590362" duration="5795000" />
     </task>
     <servers />
   </component>
@@ -143,9 +148,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="832" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1588946051990" />
-    <state x="416" y="341" key="NewPhpFileDialog" timestamp="1590488651103">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="416" y="327" key="NewPhpFileDialog" timestamp="1590525239824">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state x="416" y="327" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1590525239824" />
     <state x="416" y="341" key="NewPhpFileDialog/0.23.1280.777@0.23.1280.777" timestamp="1590488651103" />
     <state x="141" y="50" key="SettingsEditor" timestamp="1590189431251">
       <screen x="0" y="23" width="1280" height="777" />

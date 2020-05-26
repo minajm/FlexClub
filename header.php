@@ -66,7 +66,6 @@ include_once('connect.php');
                         <?php
                         session_start();
 
-
                         if (isset($_SESSION['status']) && $_SESSION['status'] !== 1) {
                             echo '
                                 <a class="nav-link text-danger" href="./logout.php"></a>
@@ -113,7 +112,7 @@ include_once('connect.php');
                 }
 
 
-                if (isset($_SESSION['role']) && $_SESSION['role'] == 1) { // admin
+                if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { // admin
                     echo '
                         <li class="nav-item">
                                 <a class="nav-link text-info" href="./admin_edit_users.php">DASHBOARD</a>

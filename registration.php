@@ -24,6 +24,7 @@ function validate_email($email)
 function printForm()
 {
     echo '
+
           <div class="container mt-4">
         <div class="row">
             <div class="col-md-12">
@@ -118,6 +119,8 @@ function printForm()
         </form>
     </div>
     </div>
+
+    
     ';
 }
 

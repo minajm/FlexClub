@@ -6,5 +6,5 @@ session_destroy();
 
 setcookie("user_email", "", time() - 3600);
 
-header('Location: http://localhost/hassanProject/index2.php');
+header('Location: http://localhost:8888/FlexClub');
 

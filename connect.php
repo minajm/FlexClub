@@ -5,7 +5,7 @@ class DBConnection
     private $servername = "localhost";
     private $username = "root";
     private $password = "root";
-    private $dbname = "hassanproject";
+    private $dbname = "gym";
     private $connection;
     static $db_connection = null;
 

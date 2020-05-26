@@ -16,17 +16,17 @@ function printForm()
   <div class="card-body px-lg-5 pt-0">
 
     <!-- Form -->
-    <form class="text-center mt-4" method="POST" action="#!">
+    <form class="text-center mt-4" method="POST">
 
       <!-- Email -->
       <div class="md-form">
-        <input type="email" id="materialLoginFormEmail" class="form-control">
+        <input type="email" id="user_email" name="user_email" class="form-control">
         <label for="materialLoginFormEmail">E-mail</label>
       </div>
 
       <!-- Password -->
       <div class="md-form">
-        <input type="password" id="materialLoginFormPassword" class="form-control">
+        <input type="password" id="user_password" name="user_password" class="form-control">
         <label for="materialLoginFormPassword">Password</label>
       </div>
 
@@ -67,6 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $sql = "SELECT * FROM user WHERE email = '" . $user_email . "' AND password = '" . md5($password) . "'";
 
         $result = mysqli_query($connection, $sql);
+
+
         if ($result != false) {
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
@@ -74,13 +76,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 session_start();
                 $_SESSION["id"] = $row["id"];
                 $_SESSION["user_email"] = $user_email;
-                $_SESSION["role"] = $row["role"]; // 1 for Admin, 2 for user(member)
+                $_SESSION["is_admin"] = $row["is_admin"];
                 $_SESSION["status"] = 1;
 
                 // set  a cookie for a month
                 setcookie("user_email", $_POST['user_email'], time() + (86400 * 30), '/');
-                header('Location: http://localhost/hassanProject/index2.php');
+                header('Location: /FlexClub');
 
+                echo "<script>window.location.replace(\"/FlexClub\");</script>";
+
+                die();
             } else {
                 echo $noMatch_alert;
                 printForm();

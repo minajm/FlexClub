@@ -1,5 +1,6 @@
 <?php
 include_once('header.php');
+include "admin_panel_check.php";
 ?>
 
 
