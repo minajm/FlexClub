@@ -20,8 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/adminPanel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/admin_class_details_edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/admin_edit_index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/admin_registration_edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/admin_testimonial_manage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/classes/aqary.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +83,7 @@
       <workItem from="1588943371282" duration="8603000" />
       <workItem from="1590173730096" duration="69000" />
       <workItem from="1590178123852" duration="43983000" />
-      <workItem from="1590430971327" duration="701000" />
+      <workItem from="1590430971327" duration="2820000" />
     </task>
     <servers />
   </component>
@@ -113,10 +119,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="240" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1588944160578" />
-    <state x="366" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588960287751">
+    <state x="366" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590488448365">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="366" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1588960287751" />
+    <state x="366" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1590488448365" />
     <state x="373" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590272850299">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -137,6 +143,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="832" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1588946051990" />
+    <state x="416" y="341" key="NewPhpFileDialog" timestamp="1590488651103">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="416" y="341" key="NewPhpFileDialog/0.23.1280.777@0.23.1280.777" timestamp="1590488651103" />
     <state x="141" y="50" key="SettingsEditor" timestamp="1590189431251">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
