@@ -1,9 +1,7 @@
 <?php
 include_once('header.php');
 
-
-function validate_phone($phone)
-{
+function phone_validation($phone){
     if (ctype_digit($phone)) {
         return true;
     } else {
@@ -11,8 +9,7 @@ function validate_phone($phone)
     }
 }
 
-function validate_email($email)
-{
+function email_validation($email){
     $regex = '/[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})/';
     if (preg_match($regex, $email, $match)) {
         return true;
@@ -21,16 +18,29 @@ function validate_email($email)
     }
 }
 
+function get_classes() {
+    global $connection;
+
+    $classOptions= mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
+    $options = '';
+    foreach ($classOptions as $classOption) {
+       $options .= '<option id="'. $classOption['id'] .'">'. $classOption['title'] .'</option>';
+    }
+
+    return '<select class="form-control" id="user_class">' . $options .'</select>';
+}
+
 function printForm()
 {
     echo '
           <div class="container mt-4">
                 <div class="row bg-light pb-5 pt-5 mb-5">
                      <div class="col text-center">
-                            <h2 class="text-dark">Registration</h2>
-                            <p class="text-secondary">In this page you can find customer review <br>
+                          <h2 class="text-dark">Registration</h2>
+                          <p class="text-secondary">In this page you can find customer review <br>
                                 This is our pleasure to here your review about our classes, our trainers and this club
-                                <br>If you are a member of this club you can add your opinion.</p>
+                                <br>If you are a member of this club you can add your opinion.
+                          </p>
                      </div>
                 </div>
                 <form method="POST" action="">
@@ -88,17 +98,8 @@ function printForm()
                  <div class="col text-left">
                       <h4 class="text-dark">Choose Classes</h4>
                  </div>
-            </div>                
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option>Gym & Swimming pool </option>
-                <option>Push and lift</option>
-                <option>Box fit</option>
-                    <option>Yogalates</option>
-                    <option>Meditation & Relaxation</option>
-                    <option>Mind fullness</option>
-                    <option>Ballet</option>
-                    <option>Street Dance</option>
-             </select>
+            </div>  
+            '. get_classes() . '            
             </div>
             <div class="row bg-light p-3 mb-3 mt-4">
                  <div class="col text-left">
@@ -169,14 +170,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $user_lastName = $_POST['user_last_name'];
         $user_age = $_POST['user_age'];
 
-        if (validate_phone($_POST['user_mobile'])) {
+        if (phone_validation($_POST['user_mobile'])) {
             $user_mobile = $_POST['user_mobile'];
         } else {
             echo $mobile_alert;
             die();
         }
 
-        if (validate_email($_POST['user_email'])) {
+        if (email_validation($_POST['user_email'])) {
             $user_email = $_POST['user_email'];
         } else {
             echo $email_alert;
@@ -195,16 +196,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $user_password = md5($_POST['user_password']);
 
 
-        $query = "INSERT INTO user (first_name, last_name, gender,age,height,weight,mobile_number,address,email,password,role,membership_id,class_id) VALUES
-                    ('$user_firstName', '$user_lastName', '$user_gender',$user_age,$user_height,
-                    $user_weight,$user_mobile,'$user_address','$user_email','$user_password',2,3,NULL)";
+        $query = "INSERT INTO user (first_name, last_name, gender,mobile_number,address,email,password,membership_id,class_id) VALUES
+                    ('$user_firstName', '$user_lastName', '$user_gender', $user_mobile,'$user_address','$user_email','$user_password',2,3,NULL)";
 
         $result = mysqli_query($connection, $query);
 
         if ($result != false) {
-            header('Location: http://localhost/hassanProject/index2.php');
-        } else {
-            echo mysqli_error($connection);
+            header('Location: /FlexClub');
+            echo "<script>window.location.replace(\"/FlexClub\");</script>";
+
+            die();
         }
 
     } else {
