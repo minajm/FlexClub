@@ -5,7 +5,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
     <div class="container-fluid">
         <div class="row">
             <?php
-            include_once('dashboard_sidebar.php');
+            include_once('admin_dashboard_panel.php');
             ?>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">

@@ -89,7 +89,7 @@ include_once('header.php');
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="./image/offer1.jpg" class="card-img mh-50 " alt="Student Offer">
+                    <img src=" <?= $feature['image']; ?>" class="card-img mh-50 " alt="Student Offer">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">

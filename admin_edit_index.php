@@ -13,14 +13,34 @@ if (isset($_GET['new'])) {
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $image = $_POST['image'];
+    $photo = "";
     $link = $_POST['link'];
 
+
+    if ($_FILES["photo"]) {
+        $target_dir = "./image/upload/";
+        $target_file = $target_dir . basename($_FILES["photo"]["name"]);
+
+        $check = getimagesize($_FILES["photo"]["tmp_name"]);
+
+        if ($check !== false) {
+            if (!file_exists($target_file)) {
+                if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
+                    $photo = $target_file;
+                }
+            } else {
+                die('photo with the name already exists, please rename and upload again');
+            }
+        } else {
+            die('incorrect image file');
+        }
+    }
+
     if ($action === 'new') {
-        $connection->query('INSERT INTO home (title, description, image, link) VALUES ("'. $title .'", "'. $description .'", "'. $image .'", "'. $link .'");');
+        $connection->query('INSERT INTO home (title, description, image, link) VALUES ("'. $title .'", "'. $description .'", "'. $photo .'", "'. $link .'");');
     } else if ($action === 'edit') {
         $id = $_GET['id'];
-        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", image="' . $image . '", link="'.$link.'" WHERE id = ' . $id . ';');
+        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", image="' . $photo . '", link="'.$link.'" WHERE id = ' . $id . ';');
     }
 
     echo "<script>window.location.replace(\"/FlexClub/admin_edit_index.php\");</script>";
@@ -50,17 +70,19 @@ function renderForm($connection, $action, $id=null) {
 
     return "<h1>" . ($action === 'new' ? "New Item" : "Edit") . "</h1>
 
-<form method=\"POST\">
+<form method=\"POST\"  enctype=\"multipart/form-data\">
   <label for=\"title\">Title:</label><br>
   <input type=\"text\" id=\"title\" name=\"title\" value='" . $title . "'><br>
   
-    <label for=\"link\">Link:</label><br>
+  <label for=\"photo\">Photo:</label><br>
+  <input type=\"file\" name=\"photo\" id=\"photo\"><br>
+  
+  <label for=\"link\">Link:</label><br>
   <input type=\"text\" id=\"link\" name=\"link\" value='" . $link . "'><br>
   
   <label for=\"description\">Description:</label><br>
   <textarea  id=\"description\" name=\"description\">" . $description. "</textarea>
-  
-  
+   
   <br><br>
   
   <input type=\"submit\" value=\"Submit\">
@@ -72,7 +94,7 @@ function renderForm($connection, $action, $id=null) {
     <div class="container-fluid">
         <div class="row">
             <?php
-            include_once ('dashboard_sidebar.php');
+            include_once('admin_dashboard_panel.php');
             ?>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">

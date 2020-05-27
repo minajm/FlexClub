@@ -145,7 +145,8 @@ function printForm()
             <input type="text" class="form-control mb-4" name="user_address" id="user-address" placeholder="Address">
 
             <button class="btn btn-dark my-4 btn-block" type="submit">Register</button>
-    
+    </form>
+    </div>
     ';
 }
 

@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
                <?php
-                include_once ('dashboard_sidebar.php');
+                include_once ('admin_dashboard_panel.php');
                ?>
 
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
