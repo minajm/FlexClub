@@ -3,10 +3,16 @@ include_once('header.php');
 
 function validate_phone($phone)
 {
-    if (ctype_digit($phone)) {
-        return true;
-    } else {
+    // Allow +, - and . in phone number
+    $filtered_phone_number = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+    // Remove "-" from number
+    $phone_to_check = str_replace("-", "", $filtered_phone_number);
+    // Check the lenght of number
+    // This can be customized if you want phone number from a specific country
+    if (strlen($phone_to_check) < 10 || strlen($phone_to_check) > 14) {
         return false;
+    } else {
+        return true;
     }
 }
 
@@ -26,11 +32,9 @@ $email_alert = '<div class="col-12"><div class="alert alert-danger">Registration
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    if (!empty($_POST['name']) && !empty($_POST['subject'])
-        && !empty($_POST['email']) && !empty($_POST['phone'])
-        && !empty($_POST['text'])) {
+    if (!empty($_POST['name']) && !empty($_POST['email'])
+        && !empty($_POST['phone']) && !empty($_POST['message'])) {
         $name = htmlspecialchars($_POST['name']);
-        $subject = htmlspecialchars($_POST['subject']);
 
         if (validate_phone($_POST['phone'])) {
             $mobile = htmlspecialchars($_POST['phone']);
@@ -46,20 +50,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             die();
         }
 
-        $text = htmlspecialchars($_POST['text']);
+        $message = htmlspecialchars($_POST['message']);
 
-        $query = "INSERT INTO contact_us(name ,subject,email,phone_number,body) values 
-            ('$name','$subject','$email',$mobile,'$text')";
+        $query = "INSERT INTO contact_us(name ,email,phone_number,message) values 
+            ('". $name ."','". $email ."','". $mobile ."','". $message ."')";
 
         $result = mysqli_query($connection, $query);
 
         if ($result != false) {
-            header('Location: http://localhost/hassanProject/index2.php');
+            header('Location: /FlexClub');
+            echo "<script>window.location.replace(\"/FlexClub\");</script>";
+
+            die();
         } else {
             echo mysqli_error($connection);
         }
     }
-
 }
 ?>
 
@@ -86,23 +92,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                         <!-- Name -->
                         <div class="md-form mt-3">
-                            <input type="text" id="materialContactFormName" placeholder="Name" class="form-control" required>
+                            <input type="text" name="name" placeholder="Name" class="form-control" required>
                         </div>
 
                         <!-- E-mail -->
                         <div class="md-form mt-3">
-                            <input type="email" id="materialContactFormEmail" placeholder="Email" class="form-control" required>
+                            <input type="email" name="email" placeholder="Email" class="form-control" required>
                         </div>
 
                         <!-- Phone -->
                         <div class="md-form mt-3">
-                            <input type="phone" id="materialContactFormPhone" placeholder="Phone" class="form-control" required>
+                            <input type="phone" name="phone" placeholder="Phone" class="form-control" required>
                         </div>
 
 
                         <!--Message-->
                         <div class="md-form mt-3">
-                            <textarea id="materialContactFormMessage" placeholder="Message"  class="form-control md-textarea" rows="3"></textarea>
+                            <textarea name="message"" placeholder="Message"  class="form-control md-textarea" rows="3"></textarea>
                         </div>
 
 
@@ -115,26 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
             </div>
         </div>
-
-<!--        <div class="Features">-->
-<!--            <h3 class="text-center" style="margin-top: 20px;">Contact us</h3><br>-->
-<!--            <div class="row">-->
-<!--                <div class="col-md-8">-->
-<!--                    <form action="" method="post">-->
-<!--                        <input class="form-control" name="name" placeholder="Name..." required/>-->
-<!--                        <br/>-->
-<!--                        <input class="form-control" name="subject" placeholder="Subject..." required/>-->
-<!--                        <br/>-->
-<!--                        <input class="form-control" name="email" placeholder="E-mail..." required/>-->
-<!--                        <br/>-->
-<!--                        <input class="form-control" name="phone" placeholder="Phone..." required/>-->
-<!--                        <br/>-->
-<!--                        <input class="form-control" name="text" placeholder="How can we help you?" required>-->
-<!--                        <br>-->
-<!--                        <input class="btn btn-primary btn-block" type="submit" value="Send"/>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!---->
 
     </div>
 

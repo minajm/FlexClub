@@ -10,7 +10,7 @@ $fault_alert = '<div class="col-12">
 </div>';
 
 if (isset($_SESSION['status']) && $_SESSION['status'] == 1
-    && isset($_SESSION['role']) && $_SESSION['role'] == 1) {
+    && isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) {
     ?>
     <div class="container">
         <div class="row">
@@ -31,17 +31,15 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1
             ?>
 
             <div class="col-12">
-                <table class="table table-bordered">
+                <table class="table table-striped table-dark">
                     <thead>
-                    <th>Name</th>
-                    <th>subject</th>
-                    <th>phone number</th>
-                    <th>message</th>
-                    <th>contact</th>
-                    <th>delete</th>
+                        <th>Name</th>
+                        <th>phone number</th>
+                        <th>message</th>
+                        <th>contact</th>
+                        <th>delete</th>
                     </thead>
                     <tbody>
-
                     <?php
                     $query = "SELECT * FROM contact_us";
                     $result = mysqli_query($connection, $query);    // object or null
@@ -50,19 +48,19 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 $id = $row["id"];
-                                echo '<tr>
-				<td>' . $row["name"] . '</td>
-				<td>' . $row["subject"] . '</td>
-				<td>' . $row["phone_number"] . '</td>
-				<td>' . $row["body"] . '</td>
-				<td><h6><a href="mailto:' . $row['email'] . ' ">email</a></h6</td>
-				<td>
-					<form action="" method="POST">
-						<input type="hidden" value="' . $id . '" name="contact_id">
-						<button type="submit" class="btn btn-danger">Delete</button>
-					</form>
-				</td>
-			</tr>';
+                                echo '
+                                        <tr>
+                                            <td>' . $row["name"] . '</td>
+                                            <td>' . $row["phone_number"] . '</td>
+                                            <td>' . $row["message"] . '</td>
+                                            <td><h6><a href="mailto:' . $row['email'] . ' ">email</a></h6</td>
+                                            <td>
+					                            <form action="" method="POST">
+                                                    <input type="hidden" value="' . $id . '" name="contact_id">
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>';
                             }
                         }
                     }
@@ -73,7 +71,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1
         </div>
     </div>
     <?php
-} else {
-    //header('Location: http://localhost/hassanProject/login.php');
-    echo '<h3 class="text-danger text-center">either you dont have a permission to view this page, OR you are not logged in</h3>';
+}
+else {
+    echo '<h3 class="text-danger text-center">You do not Login yet!!</h3>';
 }

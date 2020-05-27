@@ -72,36 +72,13 @@ include_once('header.php');
                 <span class="carousel-control-next-icon"></span>
             </a>
         </div>
-        <p class="h4 mt-4 mb-4 text-secondary">
-            New Classes
-        </p>
-        <div class="card-deck ">
-            <div class="card">
-                <img class="card-img-top" src="./image/BoxFit.jpg" alt="Box Fit">
-                <div class="card-footer d-flex justify-content-center">
-                    <h5 class="card-title text-secondary">Box Fit</h5>
-                </div>
-
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="./image/yog.jpg" alt="Yoga">
-                <div class="card-footer d-flex justify-content-center">
-                    <h5 class="card-title text-secondary" ">Yogalates</h5>
-                </div>
-
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="./image/streetDance.jpg" alt="Street Dance">
-                <div class="card-footer d-flex justify-content-center">
-                    <h5 class="card-title text-secondary">Street Dance</h5>
-                </div>
-            </div>
-        </div>
-        <a class="btn btn-dark m-5 h3 d-flex justify-content-center" href="./class.php" role="button">More Classes</a>
 
         <p class="h4 mt-4 mb-4 text-secondary">
-            Features Box
+            Features Box<br>
+            <small>New Classes & Events</small>
+
         </p>
+
 
         <?php
           $features = mysqli_fetch_all($connection->query("select * from home;"), MYSQLI_ASSOC);
@@ -122,69 +99,16 @@ include_once('header.php');
                         <p class="card-text text-dark">
                             <?= $feature['description']; ?>
                         </p>
-                        <p class="card-text">
-                            <small class="text-muted">
-                                Last updated 3 mins ago
-                            </small>
-                        </p>
+
                     </div>
                 </div>
+            </div>
+            <div class="card-footer text-center">
+                <a class="btn btn-dark " href="./registration.php" role="button">Join Know</a>
             </div>
         </div>
 
           <?php } ?>
-
-
-        <div class="card mb-3" style="max-width: 100%;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="./image/offer2.jpg" class="card-img" alt="Offer">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-secondary">Free Gift</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <p class="h4 mt-4 mb-4 text-secondary">
-            Events
-        </p>
-        <div class="card mb-3" style="max-width: 100%;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="./image/event1.jpg" class="card-img" alt="Street dance event">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-secondary"">September Event</h5>
-                        <p class="card-text text-dark">Do you like street dance? <br>We have a big event at the end of summer.<br>Join us and enjoy it
-                            <br>Location: Stephen Green Park<br> Date & Time: 10 September 11Am to 4Pm</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 100%;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="./image/event2.jpg" class="card-img" alt="healthy food workshop">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-secondary">Healthy Food Workshop</h5>
-                        <p class="card-text">This i</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="btn btn-dark m-5 h3 d-flex justify-content-center " href="./registration.php.php" role="button">Join Now</a>
-
-
 
     </div>
 <?php
