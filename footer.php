@@ -43,9 +43,6 @@
                 </p>
 
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
 
 
             <!-- Grid column -->

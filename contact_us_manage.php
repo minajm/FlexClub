@@ -1,5 +1,4 @@
 <?php
-include_once('header.php');
 
 $success_alert = '<div class="col-12">
 	<div class="alert alert-success">SUCCESS</div>
@@ -9,8 +8,7 @@ $fault_alert = '<div class="col-12">
 	<div class="alert alert-danger">FAILED</div>
 </div>';
 
-if (isset($_SESSION['status']) && $_SESSION['status'] == 1
-    && isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) {
+if (isset($_SESSION['status']) && $_SESSION['status'] == 1 ) {
     ?>
     <div class="container">
         <div class="row">
@@ -73,5 +71,5 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1
     <?php
 }
 else {
-    echo '<h3 class="text-danger text-center">You do not Login yet!!</h3>';
+    echo '<h3 class="text-danger text-center">You do not Login yet</h3>';
 }
