@@ -27,7 +27,39 @@ function get_classes() {
        $options .= '<option id="'. $classOption['id'] .'">'. $classOption['title'] .'</option>';
     }
 
-    return '<select class="form-control" id="user_class">' . $options .'</select>';
+    return '<select class="form-control" id="user_class" name="user_class">' . $options .'</select>';
+}
+
+function get_Fees() {
+    global $connection;
+
+    $feeOptions= mysqli_fetch_all($connection->query("select * from fee;"), MYSQLI_ASSOC);
+    $options = '';
+    foreach ($feeOptions as $feeOption) {
+        $options .= '
+<div class="card m-2">
+<div class="card-header">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="'. $feeOption['id'] .'" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                 '. $feeOption['name'] .'
+                            </label>
+                        </div>
+                     </div>
+                     <div class="card-body">
+                         <h5 class="card-title">'. $feeOption['amount'] .'</h5>
+                         <p class="card-text">'. $feeOption['benefits'] .'</p>
+                     </div>
+                     </div>
+                     ';
+
+    }
+
+    return '
+<div class="card-groups">
+<div class="card m-2">
+                         ' . $options .'  
+             </div>';
 }
 
 function printForm()
@@ -50,50 +82,8 @@ function printForm()
                             <h4 class="text-dark">Choose Fee</h4>
                      </div>
                 </div>
-                <div class="card-deck">
-                    <div class="card">
-                    <div class="card-header">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                            <label class="form-check-label" for="exampleRadios1">
-                             Professional
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
-                                Enterprise
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
-                            <label class="form-check-label" for="exampleRadios3">
-                                    Premium
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
+                    '. get_fees() .'
+                
             <div class="row bg-light p-3 mb-3 mt-4">
                  <div class="col text-left">
                       <h4 class="text-dark">Choose Classes</h4>
@@ -160,11 +150,9 @@ $email_alert = '<div class="col-12"><div class="alert alert-danger">Registration
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (!empty($_POST['user_first_name']) && !empty($_POST['user_last_name']) &&
-        !empty($_POST['user_age']) && !empty($_POST['user_height']) &&
-        !empty($_POST['user_weight']) && !empty($_POST['user_weight']) &&
         !empty($_POST['user_email']) && !empty($_POST['user_mobile']) &&
         !empty($_POST['user_address']) && !empty($_POST['user_gender']) &&
-        !empty($_POST['user_password'])
+        !empty($_POST['user_class']) && !empty($_POST['user_password'])
     ) {
         $user_firstName = $_POST['user_first_name'];
         $user_lastName = $_POST['user_last_name'];
@@ -196,7 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $user_password = md5($_POST['user_password']);
 
 
-        $query = "INSERT INTO user (first_name, last_name, gender,mobile_number,address,email,password,membership_id,class_id) VALUES
+        $query = "INSERT INTO user (,first_name, last_name, gender,mobile_number,address,email,password,membership_id,class_id) VALUES
                     ('$user_firstName', '$user_lastName', '$user_gender', $user_mobile,'$user_address','$user_email','$user_password',2,3,NULL)";
 
         $result = mysqli_query($connection, $query);
