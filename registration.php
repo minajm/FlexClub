@@ -1,11 +1,19 @@
 <?php
 include_once('header.php');
 
-function phone_validation($phone){
-    if (ctype_digit($phone)) {
-        return true;
-    } else {
+
+function phone_validation($phone)
+{
+    // Allow +, - and . in phone number
+    $filtered_phone_number = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+    // Remove "-" from number
+    $phone_to_check = str_replace("-", "", $filtered_phone_number);
+    // Check the lenght of number
+    // This can be customized if you want phone number from a specific country
+    if (strlen($phone_to_check) < 10 || strlen($phone_to_check) > 14) {
         return false;
+    } else {
+        return true;
     }
 }
 
@@ -40,7 +48,7 @@ function get_Fees() {
 <div class="card m-2">
 <div class="card-header">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="'. $feeOption['id'] .'" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="user_fee" id="'. $feeOption['id'] .'" value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">
                                  '. $feeOption['name'] .'
                             </label>
@@ -56,8 +64,7 @@ function get_Fees() {
     }
 
     return '
-<div class="card-groups">
-<div class="card m-2">
+            <div class="card-groups">
                          ' . $options .'  
              </div>';
 }
@@ -157,8 +164,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $user_firstName = $_POST['user_first_name'];
         $user_lastName = $_POST['user_last_name'];
         $user_age = $_POST['user_age'];
+        $user_class = $_POST['user_class'];
+        $user_fee = $_POST['user_fee'];
 
-        if (phone_validation($_POST['user_mobile'])) {
+
+        if (phone_validation($_POST['user_mobile']) == true) {
             $user_mobile = $_POST['user_mobile'];
         } else {
             echo $mobile_alert;
@@ -172,8 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             die();
         }
 
-        $user_height = $_POST['user_height'];
-        $user_weight = $_POST['user_weight'];
+
         $user_address = $_POST['user_address'];
         $user_gender = "N/A";
         if ($_POST['user_gender'] == "male") {
@@ -184,8 +193,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $user_password = md5($_POST['user_password']);
 
 
-        $query = "INSERT INTO user (,first_name, last_name, gender,mobile_number,address,email,password,membership_id,class_id) VALUES
-                    ('$user_firstName', '$user_lastName', '$user_gender', $user_mobile,'$user_address','$user_email','$user_password',2,3,NULL)";
+        $query = "INSERT INTO user (class,first_name, last_name, gender,mobile_number,address,email,password,fee_id,class_id) VALUES
+                    ('". $user_firstName. "', '". $user_lastName ."', '" .$user_gender ."','". $user_mobile. "' ,'". $user_address ."','". $user_email ."','". $user_password ."','". $user_fee."','". $user_class ."')";
 
         $result = mysqli_query($connection, $query);
 
@@ -207,4 +216,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
 include_once('footer.php');
+
 
