@@ -101,11 +101,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 } else {
     printForm();
 }
-//else if ($_SERVER['REQUEST_METHOD'] == "GET") {
-//    if (isset($_SESSION['status']) && $_SESSION['status'] != 1) {
-//        printForm();
-//    } else { // already logged in
-//        header('Location: http://localhost/hassanProject/index.php');
-//    }
-//}
+
 include_once('footer.php');

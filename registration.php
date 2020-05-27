@@ -35,7 +35,11 @@ function printForm()
                 </div>
                 <form method="POST" action="">
                 <div class="form-group">
-                <label for="exampleFormControlSelect1">Choose Fee</label>
+                <div class="row bg-light p-3 mb-3">
+                     <div class="col text-left">
+                            <h4 class="text-dark">Choose Fee</h4>
+                     </div>
+                </div>
                 <div class="card-deck">
                     <div class="card">
                     <div class="card-header">
@@ -80,110 +84,72 @@ function printForm()
                     </div>
                 </div>
             </div>
-                <label class="mt-3" for="exampleFormControlSelect1">Choose Classes</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Gym & Swimming pool </option>
-                    <option>Push and lift</option>
-                    <option>Box fit</option>
+            <div class="row bg-light p-3 mb-3 mt-4">
+                 <div class="col text-left">
+                      <h4 class="text-dark">Choose Classes</h4>
+                 </div>
+            </div>                
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>Gym & Swimming pool </option>
+                <option>Push and lift</option>
+                <option>Box fit</option>
                     <option>Yogalates</option>
                     <option>Meditation & Relaxation</option>
                     <option>Mind fullness</option>
                     <option>Ballet</option>
                     <option>Street Dance</option>
-                </select>
+             </select>
             </div>
-         
+            <div class="row bg-light p-3 mb-3 mt-4">
+                 <div class="col text-left">
+                      <h4 class="text-dark">Enter your details information</h4>
+                 </div>
+            </div> 
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- First name -->
+                    <input type="text" id="user-first-name" name="user_first_name" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                    <!-- Last name -->
+                        <input type="text" id="user-last-name" name="user_last_name" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="col">
+                    <!-- E-mail -->
+                    <input type="email" name="user_email" id="user-email" class="form-control mb-4" placeholder="E-mail">
+                </div>
+                <div class="col">
+                    <input type="password" name="user_password" id="user-password"s class="form-control mb-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="col">
+                    <!-- Phone number -->
+                    <input type="text" id="user-mobile" name="user_mobile" class="form-control mb-4" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                </div>
+                <div class="col">
+                    <div class="custom-control custom-control-inline">
+                            <label class=" text-Dark" >Gender: </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio"  class="custom-control-input"  id="inlineRadio1" name="user_gender" >
+                            <label class="custom-control-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio"  class="custom-control-input" id="inlineRadio2" name="user_gender">
+                            <label class="custom-control-label" for="inlineRadio2">Female</label>
+                    </div>
+                </div>
+            </div>
+            <input type="text" class="form-control mb-4" name="user_address" id="user-address" placeholder="Address">
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-first-name">First Name</label>
-                        <input type="text" class="form-control" id="user-first-name" name="user_first_name">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-last-name">Last Name</label>
-                        <input type="text" class="form-control" id="user-last-name" name="user_last_name">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="genderGroup">Gender</label>
-                    <div id="genderGroup">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="user_gender" id="inlineRadio1"
-                                   value="male">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" id="inlineRadio2" name="user_gender" type="radio"
-                                   value="female">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-age">Age</label>
-                        <input type="number" class="form-control" id="user-age" name="user_age">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-height">Height</label>
-                        <input type="number" class="form-control" id="user-height" name="user_height">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-weight">Weight</label>
-                        <input type="number" class="form-control" id="user-weight" name="user_weight">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-email">Email</label>
-                        <input type="text" name="user_email" class="form-control" id="user-email" placeholder="Email">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-mobile">mobile</label>
-                        <input type="number" class="form-control" id="user-mobile" name="user_mobile">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="user-address">address</label>
-                        <input type="text" name="user_address" class="form-control" id="user-address"
-                               placeholder="Email">
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                <div class="form-group">
-                    <label for="user-password">Password</label>
-                    <input type="password" name="user_password" class="form-control" id="user-password"
-                           placeholder="password">
-                </div>
-            </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </form>
-    </div>
-    </div>
-
+            <button class="btn btn-dark my-4 btn-block" type="submit">Register</button>
     
     ';
 }
+
 
 $fault_alert = '<div class="col-12"><div class="alert alert-danger">Login Failed: UNKNOWN</div></div>';
 $empty_alert = '<div class="col-12"><div class="alert alert-danger">Registration Failed: There is an empty field(\'s)</div></div>';
@@ -252,3 +218,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
 include_once('footer.php');
+
