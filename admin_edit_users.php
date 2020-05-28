@@ -70,5 +70,4 @@ include "admin_panel_check.php";
     </div>
 
 
-<?php
-include_once('footer.php');
+

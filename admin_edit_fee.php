@@ -87,7 +87,7 @@ function renderForm($connection, $action, $id=null) {
                         <?php echo "Count : " . $features_count; ?></span>
                 </h3>
 
-                <a class="text-decoration-none text-secondary mb-3" href="./admin_edit_fee.php?new">
+                <a class="text-decoration-none text-danger" mb-3" href="./admin_edit_fee.php?new">
                     Add new Fee
                 </a>
                 <br>
@@ -100,13 +100,14 @@ function renderForm($connection, $action, $id=null) {
                 <br>
 
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                        <thead>
+                    <table class="table  table-sm">
+                        <thead class="thead-dark">
                         <tr>
                             <th>#</th>
                             <th>amount</th>
                             <th>name</th>
                             <th>benefits</th>
+                            <th>Action</th>
 
                         </tr>
                         </thead>
@@ -138,5 +139,3 @@ function renderForm($connection, $action, $id=null) {
     </div>
 
 
-<?php
-include_once('footer.php');

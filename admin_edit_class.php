@@ -165,5 +165,4 @@ function renderForm($connection, $action, $id=null) {
     </div>
 
 
-<?php
-include_once('footer.php');
+
