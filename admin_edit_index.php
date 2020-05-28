@@ -15,6 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $description = $_POST['description'];
     $photo = "";
     $link = $_POST['link'];
+    $type = $_POST['type'];
+
 
 
     if ($_FILES["photo"]) {
@@ -37,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     if ($action === 'new') {
-        $connection->query('INSERT INTO home (title, description, image, link) VALUES ("'. $title .'", "'. $description .'", "'. $photo .'", "'. $link .'");');
+        $connection->query('INSERT INTO home (title, description, image, link, type) VALUES ("'. $title .'", "'. $description .'", "'. $photo .'", "'. $link .'", "'.$type.'");');
     } else if ($action === 'edit') {
         $id = $_GET['id'];
-        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", image="' . $photo . '", link="'.$link.'" WHERE id = ' . $id . ';');
+        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", image="' . $photo . '", link="'.$link.'", type="'.$type.'" WHERE id = ' . $id . ';');
     }
 
     echo "<script>window.location.replace(\"/FlexClub/admin_edit_index.php\");</script>";
@@ -50,6 +52,12 @@ function renderForm($connection, $action, $id=null) {
     $title = "";
     $description = "";
     $link = "";
+    $type = "";
+    if ($_POST['type'] == "class") {
+        $user_gender = 'class';
+    } elseif ($_POST['type'] == "event") {
+        $user_gender = 'event';
+    }
 
     if ($id != null) {
         $sql = "SELECT * FROM home where id=" . $id;
@@ -60,6 +68,7 @@ function renderForm($connection, $action, $id=null) {
             $title = $row['title'];
             $description = $row['description'];
             $link = $row['link'];
+
 
         } else {
             die('record does not exist');
@@ -80,10 +89,16 @@ function renderForm($connection, $action, $id=null) {
   <input type=\"text\" id=\"link\" name=\"link\" value='" . $link . "'><br>
   
   <label for=\"description\">Description:</label><br>
-  <textarea  id=\"description\" name=\"description\">" . $description. "</textarea>
-   
-  <br><br>
+  <textarea  id=\"description\" name=\"description\">" . $description. "</textarea><br>
   
+  <div class=\"form-check\"></div>
+   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type1\" value=\"class\">
+   <label class=\"form-check-label\" for=\"type1\">New Class</label>
+   <br>
+   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type2\" value=\"event\">
+   <label class=\"form-check-label\" for=\"type2\">Offers and Events</label>
+   </div>
+  <br>
   <input type=\"submit\" value=\"Submit\">
 </form>";
 }
@@ -129,6 +144,7 @@ function renderForm($connection, $action, $id=null) {
                             <th>Title</th>
                             <th>Description</th>
                             <th>Link</th>
+                            <th>Type</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -144,7 +160,8 @@ function renderForm($connection, $action, $id=null) {
                                             <td>' . $row["id"] . '</td>
                                             <td>' . $row["title"] . '</td>
                                             <td>' . $row["description"] . '</td>
-                                            <td>' . $row["link"] . '</td>
+                                            <td>' . $row["link"] . '</td> 
+                                            <td>' . $row["type"] . '</td> 
                                             <td><a href="admin_edit_index.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
                                 }

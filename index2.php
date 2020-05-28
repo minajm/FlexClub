@@ -73,10 +73,8 @@ include_once('header.php');
             </a>
         </div>
 
-        <p class="h4 mt-4 mb-4 text-secondary">
-            Features Box<br>
-            <small>New Classes & Events</small>
-
+        <p class="h4 mt-4 mb-4 mt-4 text-secondary">
+            New Classes
         </p>
 
 
