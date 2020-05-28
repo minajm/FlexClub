@@ -3,7 +3,6 @@
 
 <?php
 
-<!-- this is the head -->
 include_once('header.php');
 ?>
 <!-- Below div class will define the conatiner -->
@@ -23,9 +22,8 @@ include_once('header.php');
 
             <?php
             
-            <!-- below its a command or quercy which will request the information from class for "select" -->
             $features = mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
-              
+
             foreach ($features as $feature) {
                 ?>
                 
