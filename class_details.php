@@ -1,6 +1,7 @@
 <?php
 include_once('header.php');
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
@@ -22,36 +23,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             }
         }
     }
-}
-?>
+} ?>
+
     <div class="container">
+
+        <?php
+        if (isset($_SESSION['status']) && $_SESSION['status'] == 1) { // logged IN
+            echo '
         <div class="card mt-5 mb-5">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="<?php echo $image ?>" class="card-img" alt="...">
+                    <img src="' . $image . ' " class="card-img" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <?php
-                            echo $title;
-                            ?>
-                        </h5>
+                        ' . $title . '
+                     </h5>
                         <p class="card-text">
-                            <?php
-                            echo $summery;
-                            ?>
+                           ' . $summery . '    
                         </p>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
                 <a class="btn btn-link text-dark  mt-1 h3 d-flex justify-content-center "
-                   href="<?php echo $link ?>" role="button">
+                   href=" ' . $link . ' " role="button">
                     link
                 </a>
             </div>
         </div>
+        ';
+        } else {
+            echo '
+      <div class="container">
+        <div class="row ">
+            <div class="text-danger text-center">You are not logged in, Please <a href="login.php"><b>login</b></a></div>
+        </div>
+    </div>  
+    ';
+        } ?>
     </div>
 
 <?php
