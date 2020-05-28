@@ -1,5 +1,5 @@
 <!--student 1: Mina Jamshidian / Student Number: 3013827-->
-<!--student 2: Saad  / Student Number: -->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
 
 <?php
 
@@ -18,11 +18,11 @@ include_once('header.php');
                 <p class="text-secondary">You can find FLEX CLUB classes here.</p>
             </div>
         </div>
-        <!-- Now from here we come to teh class which explains teh card deck -->
+        <!-- Now from here we come to teh class which explains the card deck -->
         <div class="card-deck">
 
             <?php
-            <!-- below its a command or quercy which will request the information from class for select -->
+            <!--below its a command or quercy which will request the information from class for select -->
             $features = mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
 
             foreach ($features as $feature) {
@@ -31,9 +31,10 @@ include_once('header.php');
                 <div class="col-md-4">
                    <!-- The card is defned under this class  -->
                     <div class="card  mb-3">
-                        <!-- Below it will define the image which would y -->
+                        <!-- Below it will define the image which would explain the class placed the image which represent the flex club class foto -->
                         <img src=" <?= $feature['image']; ?>" class="card-img-top mh-50 " alt="Flex club Class Photo">
-                        <div class="card-body">
+                         
+                          <div class="card-body">
                             <h5 class="card-title">
                                 <?= $feature['title']; ?>
                             </h5>
