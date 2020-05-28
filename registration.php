@@ -17,7 +17,8 @@ function phone_validation($phone)
     }
 }
 
-function email_validation($email){
+function email_validation($email)
+{
     $regex = '/[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})/';
     if (preg_match($regex, $email, $match)) {
         return true;
@@ -26,37 +27,49 @@ function email_validation($email){
     }
 }
 
-function get_classes() {
+function get_classes()
+{
     global $connection;
 
-    $classOptions= mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
+    $classOptions = mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
     $options = '';
     foreach ($classOptions as $classOption) {
-       $options .= '<option value="'. $classOption['id'] .'">'. $classOption['title'] .'</option>';
+        $options .= '<option value="' . $classOption['id'] . '">' . $classOption['title'] . '</option>';
     }
 
-    return '<select class="form-control" id="user_class_id" name="user_class_id">' . $options .'</select>';
+    return '<select class="form-control" id="user_class_id" name="user_class_id">' . $options . '</select>';
 }
 
-function get_Fees() {
+function get_Fees()
+{
     global $connection;
 
-    $feeOptions= mysqli_fetch_all($connection->query("select * from fee;"), MYSQLI_ASSOC);
+    $feeOptions = mysqli_fetch_all($connection->query("select * from fee;"), MYSQLI_ASSOC);
     $options = '';
+
     foreach ($feeOptions as $feeOption) {
         $options .= '
-<div class="card m-2">
-<div class="card-header">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="user_fee_id" value="'. $feeOption['id'] .'"  checked>
-                            <label class="form-check-label" for="user_fee_id">
-                                 '. $feeOption['name'] .'
-                            </label>
+                <div class="col-md-4 mt-2">
+                    <div class="card bg-secondary mb-3 text-center " style="height: 100%">
+                        <div class="card-header bg-dark">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="user_fee_id" value="' . $feeOption['id'] . '"  checked>
+                                <label class="form-check-label font-weight-bold text-light" for="user_fee_id">
+                                     ' . $feeOption['name'] . '
+                                </label>
+                            </div>
                         </div>
-                     </div>
-                     <div class="card-body">
-                         <h5 class="card-title">'. $feeOption['amount'] .'</h5>
-                         <p class="card-text">'. $feeOption['benefits'] .'</p>
+                         <div class="card-body">
+                         <div class="bg-light  " >
+                              <p class="card-title  p-5 h4 text-dark">
+                              <small class="h5 font-weight-light text-secondary">from  </small>
+                              $
+                               ' . $feeOption['amount'] . '
+                              <small class="h5 font-weight-light text-secondary">a month  </small>
+                               </p>
+                        </div>
+                             <pre class="card-text text-white-50 ">' . $feeOption['benefits'] . '</pre>
+                         </div>
                      </div>
                      </div>
                      ';
@@ -64,8 +77,8 @@ function get_Fees() {
     }
 
     return '
-            <div class="card-groups">
-                         ' . $options .'  
+            <div class="card-deck">
+                         ' . $options . '  
              </div>';
 }
 
@@ -73,34 +86,34 @@ function printForm()
 {
     echo '
           <div class="container mt-4">
-                <div class="row bg-light pb-5 pt-5 mb-5">
+                <div class="row bg-dark pb-5 pt-5 mb-5">
                      <div class="col text-center">
-                          <h2 class="text-dark">Registration</h2>
-                          <p class="text-secondary">In this page you can find customer review <br>
-                                This is our pleasure to here your review about our classes, our trainers and this club
-                                <br>If you are a member of this club you can add your opinion.
+                          <h2 class="text-light">Registration</h2>
+                          <p class="text-white-50">
+                          Entry to the Register is by qualification. <br>Flex Club fully recognises that the range of training, experience and qualifications across the fitness industry, and around the world is very diverse.
                           </p>
                      </div>
                 </div>
                 <form method="POST" action="">
                 <div class="form-group">
-                <div class="row bg-light p-3 mb-3">
+                <div class="row  p-3 mb-2">
                      <div class="col text-left">
-                            <h4 class="text-dark">Choose Fee</h4>
+                            <h4 class="text-secondary font-weight-bold ">Choose Fee Plan</h4>
                      </div>
                 </div>
-                    '. get_fees() .'
                 
-            <div class="row bg-light p-3 mb-3 mt-4">
+                    ' . get_fees() . '
+                
+            <div class="row  p-3 mb-3 mt-4">
                  <div class="col text-left">
-                      <h4 class="text-dark">Choose Classes</h4>
+                      <h4 class="text-secondary font-weight-bold">Choose a Class</h4>
                  </div>
             </div>  
-            '. get_classes() . '            
+            ' . get_classes() . '            
             </div>
-            <div class="row bg-light p-3 mb-3 mt-4">
+            <div class="row  p-3 mb-3 mt-4">
                  <div class="col text-left">
-                      <h4 class="text-dark">Enter your details information</h4>
+                      <h4 class="text-secondary font-weight-bold">Enter your details information</h4>
                  </div>
             </div> 
             <div class="form-row mb-4">
@@ -144,7 +157,7 @@ function printForm()
             </div>
             <input type="text" class="form-control mb-4" name="user_address" id="user-address" placeholder="Address">
 
-            <button class="btn btn-dark my-4 btn-block" type="submit">Register</button>
+            <button class="btn btn-dark mb-4 my-4 btn-block" type="submit">Register</button>
     </form>
     </div>
     ';
@@ -199,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $user_password = md5($_POST['user_password']);
 
         $query = "INSERT INTO user (first_name, last_name, gender,mobile_number,address,email,password) VALUES
-                    ('". $user_firstName. "', '". $user_lastName ."', '" .$user_gender ."','". $user_mobile. "' ,'". $user_address ."','". $user_email ."','". $user_password ."')";
+                    ('" . $user_firstName . "', '" . $user_lastName . "', '" . $user_gender . "','" . $user_mobile . "' ,'" . $user_address . "','" . $user_email . "','" . $user_password . "')";
 
         $result = mysqli_query($connection, $query);
 
@@ -207,7 +220,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $user_id = mysqli_insert_id($connection);
 
             $query = "INSERT INTO membership (user_id, class_id, fee_id) VALUES
-                    ('". $user_id. "', '". $class_id ."', '" .$fee_id ."')";
+                    ('" . $user_id . "', '" . $class_id . "', '" . $fee_id . "')";
 
             if (mysqli_query($connection, $query)) {
                 header('Location: /FlexClub');

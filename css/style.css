@@ -7,7 +7,8 @@ body {
 
 pre {
     word-break: normal;
-    overflow: inherit;
+    overflow: scroll;
+    font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
 }
 .container {
     width: 1000px;
