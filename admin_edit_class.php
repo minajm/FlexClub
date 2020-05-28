@@ -68,7 +68,7 @@ function renderForm($connection, $action, $id=null) {
     }
 
 
-    return "<h1>" . ($action === 'new' ? "New Item" : "Edit") . "</h1>
+    return "<h3 class='mt-3 mb-3 text-info'>" . ($action === 'new' ? "New Item" : "Edit") . "</h3>
 
 <form method=\"POST\"  enctype=\"multipart/form-data\">
   <label for=\"title\">Title:</label><br>
@@ -107,11 +107,11 @@ function renderForm($connection, $action, $id=null) {
                     $features_count = $row['COUNT(*)'];
                 }
                 ?>
-                <h2>Feature Boxes<span class="float-right">
+                <h3 class="mt-3 mb-3 text-dark">All Classes<span class="float-right">
                         <?php echo "Count : " . $features_count; ?></span>
-                </h2>
+                </h3>
 
-                <a href="./admin_edit_class.php?new">Add new feature box</a>
+                <a class="text-decoration-none text-danger mb-3" href="./admin_edit_class.php?new">Add new Class</a>
 
                 <br>
                 <?php
@@ -123,8 +123,8 @@ function renderForm($connection, $action, $id=null) {
                 <br>
 
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                        <thead>
+                    <table class="table table-sm mt-5">
+                        <thead class="thead-dark">
                         <tr>
                             <th>#</th>
                             <th>Title</th>

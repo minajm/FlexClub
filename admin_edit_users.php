@@ -19,16 +19,15 @@ include "admin_panel_check.php";
                     $users_count = $row['COUNT(*)'];
                 }
                 ?>
-                <h2>Users<span class="float-right"><?php echo "Count : " . $users_count; ?></span></h2>
+                <h2 class="mt-3 mb-3 text-dark">Users<span class="float-right"><?php echo "Count : " . $users_count; ?></span></h2>
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                        <thead>
+                    <table class="table table-sm mt-5">
+                        <thead class="thead-dark">
                         <tr>
                             <th>#</th>
                             <th>Name</th>
                             <th>Gender</th>
                             <th>Email</th>
-                            <th>membership</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -39,24 +38,12 @@ include "admin_panel_check.php";
                         if (!is_null($result)) {
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
-                                    $membership = "";
-                                    switch ($row['membership_id']) {
-                                        case 1:
-                                            $membership = "Golden";
-                                            break;
-                                        case 2:
-                                            $membership = "Silver";
-                                            break;
-                                        case 3:
-                                            $membership = "Bronze";
-                                            break;
-                                    }
+
                                     echo '<tr>
                                             <td>' . $row["id"] . '</td>
                                             <td>' . $row["first_name"] . ' ' . $row["last_name"] . '</td>
                                             <td>' . $row["gender"] . '</td>
                                             <td>' . $row["email"] . '</td>
-                                            <td>' . $membership . '</td>
                                         </tr>';
                                 }
                             }
