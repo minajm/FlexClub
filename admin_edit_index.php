@@ -17,11 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $link = $_POST['link'];
     $type = $_POST['type'];
 
-
-
-    if ($_FILES["photo"]) {
+    if ($_FILES["photo"]["name"]) {
         $target_dir = "./image/upload/";
-        $target_file = $target_dir . basename($_FILES["photo"]["name"]);
+        $target_file = $target_dir . time() . basename($_FILES["photo"]["name"]);
 
         $check = getimagesize($_FILES["photo"]["tmp_name"]);
 
@@ -39,10 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     if ($action === 'new') {
-        $connection->query('INSERT INTO home (title, description, image, link, type) VALUES ("'. $title .'", "'. $description .'", "'. $photo .'", "'. $link .'", "'.$type.'");');
+        $connection->query('INSERT INTO home (title, description, link, type) VALUES ("'. $title .'", "'. $description .'", "'. $link .'", "'.$type.'");');
     } else if ($action === 'edit') {
         $id = $_GET['id'];
-        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", image="' . $photo . '", link="'.$link.'", type="'.$type.'" WHERE id = ' . $id . ';');
+        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", link="'.$link.'", type="'.$type.'" WHERE id = ' . $id . ';');
+    }
+
+    if ($photo != "") {
+        $connection->query('UPDATE home SET image="' . $photo . '" WHERE id = ' . $id . ';');
     }
 
     echo "<script>window.location.replace(\"/FlexClub/admin_edit_index.php\");</script>";
@@ -53,11 +55,6 @@ function renderForm($connection, $action, $id=null) {
     $description = "";
     $link = "";
     $type = "";
-    if ($_POST['type'] == "class") {
-        $user_gender = 'class';
-    } elseif ($_POST['type'] == "event") {
-        $user_gender = 'event';
-    }
 
     if ($id != null) {
         $sql = "SELECT * FROM home where id=" . $id;
@@ -68,8 +65,7 @@ function renderForm($connection, $action, $id=null) {
             $title = $row['title'];
             $description = $row['description'];
             $link = $row['link'];
-
-
+            $type = $row['type'];
         } else {
             die('record does not exist');
         }
@@ -92,10 +88,10 @@ function renderForm($connection, $action, $id=null) {
   <textarea  id=\"description\" name=\"description\">" . $description. "</textarea><br>
   
   <div class=\"form-check\"></div>
-   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type1\" value=\"class\">
+   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type1\" value=\"class\"  " . ($type == 'class' ? 'checked' : ''). ">
    <label class=\"form-check-label\" for=\"type1\">New Class</label>
    <br>
-   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type2\" value=\"event\">
+   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type2\" value=\"event\" " . ($type == 'event' ? 'checked' : '') . ">
    <label class=\"form-check-label\" for=\"type2\">Offers and Events</label>
    </div>
   <br>
@@ -145,6 +141,7 @@ function renderForm($connection, $action, $id=null) {
                             <th>Description</th>
                             <th>Link</th>
                             <th>Type</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -161,7 +158,10 @@ function renderForm($connection, $action, $id=null) {
                                             <td>' . $row["title"] . '</td>
                                             <td>' . $row["description"] . '</td>
                                             <td>' . $row["link"] . '</td> 
-                                            <td>' . $row["type"] . '</td> 
+                                            <td>' . $row["type"] . '</td>
+                                            <td> 
+                                            '. '<img width="100" height="100" src="' . $row['image'] . '" >' . '
+                                            </td> 
                                             <td><a href="admin_edit_index.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
                                 }
