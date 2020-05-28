@@ -44,7 +44,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) { // authorized
             }
 
         } else {
-            header('Location: http://localhost/hassanProject/index2.php');
+            header('Location: http://localhost/hassanProject/index.php');
 
         }
     }

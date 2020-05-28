@@ -39,7 +39,7 @@ include_once('connect.php');
 <div class="navb">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent static-top">
         <!-- Brand/logo -->
-        <a class="navbar-brand text-secondary h1 font-weight-bold mt-1" href="./index2.php">
+        <a class="navbar-brand text-secondary h1 font-weight-bold mt-1" href="index.php">
             FLEX CLUB
         </a>
 
@@ -51,7 +51,7 @@ include_once('connect.php');
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index2.php">Home
+                    <a class="nav-link" href="index.php">Home
                     </a>
                 </li>
                 <li class="nav-item">

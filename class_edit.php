@@ -81,7 +81,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1) { // logged IN
         echo '
       <div class="container">
         <div class="row">
-            <div class="text-danger text-center">You are not authorized to see this page<a href="index2.php"><b>HOME</b></a></div>
+            <div class="text-danger text-center">You are not authorized to see this page<a href="index.php"><b>HOME</b></a></div>
         </div>
     </div>
     ';
@@ -90,7 +90,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1) { // logged IN
     echo '
       <div class="container">
         <div class="row">
-            <div class="text-danger text-center">You are not logged in, Please go <a href="index2.php"><b>HOME</b></a></div>
+            <div class="text-danger text-center">You are not logged in, Please go <a href="index.php"><b>HOME</b></a></div>
         </div>
     </div>
     ';
