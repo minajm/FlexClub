@@ -4,6 +4,11 @@ html {
 body {
     min-height: 100%;
 }
+
+pre {
+    word-break: normal;
+    overflow: inherit;
+}
 .container {
     width: 1000px;
     position: relative;
@@ -14,7 +19,12 @@ body {
     width:120px;margin-bottom:10px;
 }
 
-
+/****************Bootstrap***********/
+/*for card deck bootstrap define hight and  overflow scroll*/
+.card-deck p{
+    height: 150px;
+    overflow: scroll;
+}
 
 /***********************home page*******************/
 

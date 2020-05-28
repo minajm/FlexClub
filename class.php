@@ -22,7 +22,6 @@ include_once('header.php');
         <div class="card-deck">
 
             <?php
-            
 
             $features = mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
 
@@ -60,3 +59,4 @@ include_once('header.php');
 
 <?php
 include_once('footer.php');
+?>

@@ -24,7 +24,7 @@ include_once('header.php');
                     <div class="carousel-caption">
                         <h1>Flex Club</h1>
                         <a href="tel:+353-061-4486165" class=" m-2 text-decoration-none text-light">
-                            <h3 >
+                            <h3>
                                 Tel:0614486165
                             </h3>
                         </a>
@@ -73,39 +73,92 @@ include_once('header.php');
             </a>
         </div>
 
-        <p class="h4 mt-4 mb-4 mt-4 text-secondary">
+        <p class="h3 mt-4 mb-4 font-weight-bold text-secondary">
             New Classes
         </p>
+        <p class=" h4 mt-2 mb-4 ont-weight-bold text-secondary">
+            <small >
+                We have a lot of amazing new classes in Flex Club
+        </p>
 
-        <?php
-          $features = mysqli_fetch_all($connection->query("select * from home where type='class';"), MYSQLI_ASSOC);
+        <div class="card-deck ">
+            <?php
+            $features = mysqli_fetch_all($connection->query("select * from home where type='class';"), MYSQLI_ASSOC);
 
-          foreach ($features as $feature) {
-        ?>
-
-        <div class="card mb-3" style="max-width: 100%;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="<?= $feature['image']; ?>" class="card-img mh-50 " alt="Student Offer">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-secondary"">
-                            <?= $feature['title']; ?>
-                        </h5>
-                        <p class="card-text text-dark">
-                            <?= $feature['description']; ?>
-                        </p>
-
+            foreach ($features as $feature) {
+                ?>
+                <!-- This class will define the coloumn and its location -->
+                <div class="col-md-4 mt-2">
+                    <!-- The card is defned under this class  -->
+                    <div class="card  mb-3">
+                        <!-- Below it will define the image which would explain the class placed the image which represent the flex club class foto -->
+                        <img src=" <?= $feature['image']; ?>" class="card-img-top mh-50 " alt="New Flex Club Classes">
+                        <!-- Below the class defines the class body-->
+                        <div class="card-body text-center">
+                            <!-- Below this class will define the card title  -->
+                            <h5 class="card-title text-secondary">
+                                <?= $feature['title']; ?>
+                            </h5>
+                            <p class="card-text text-dark">
+                                <?= $feature['description']; ?>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-footer text-center">
-                <a class="btn btn-dark " href="./registration.php" role="button">Join Know</a>
-            </div>
+
+            <?php } ?>
+            <a type="button" class="btn btn-dark btn-block mt-3 mb-3" href="./class.php">More Classes</a>
+
         </div>
 
-          <?php } ?>
+        <p class="h3 mt-4 mb-4 font-weight-bold text-secondary">
+            Offers & Events
+        </p>
+        <p class=" h4 mt-2 mb-4 ont-weight-bold text-secondary">
+            <small >
+                You can find this special offers & this amazing events just in Flex Club
+                <br>
+                All events are free for our member
+            </small>
+        </p>
+
+
+        <div class="card-deck ">
+            <?php
+            $features = mysqli_fetch_all($connection->query("select * from home where type='event';"), MYSQLI_ASSOC);
+
+            foreach ($features as $feature) {
+                ?>
+                <!-- This class will define the coloumn and its location -->
+                <div class="col-md-6 mt-3 mb-2">
+                    <!-- The card is defned under this class  -->
+                    <div class="card  mb-3" style="max-width:100% ; ">
+                        <div class="row no-gutters">
+                            <div class="col-md-6">
+                                <!-- Below it will define the image which would explain the class placed the image which represent the flex club class foto -->
+                                <img style="height: 100%;" src=" <?= $feature['image']; ?>" class="card-img  "
+                                     alt="Flex club Class Photo">
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Below the class defines the class body-->
+                                <div class="card-body text-left">
+                                    <!-- Below this class will define the card title  -->
+                                    <h5 class="card-title text-secondary">
+                                        <?= $feature['title']; ?>
+                                    </h5>
+                                    <p class="card-text text-dark">
+                                    <?= $feature['description']; ?>
+                                 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } ?>
+            <a type="button" class="btn btn-dark btn-block mt-3 mb-5" href="./registration.php">Join Now</a>
+
+        </div>
 
     </div>
 <?php
