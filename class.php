@@ -1,9 +1,9 @@
 <!--student 1: Mina Jamshidian / Student Number: 3013827-->
 <!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
 
+<!-- this is the header -->
 <?php
 
-<!-- this is the head -->
 include_once('header.php');
 ?>
 <!-- Below div class will define the conatiner -->
