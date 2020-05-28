@@ -22,6 +22,7 @@ include_once('header.php');
 
             <?php
             
+
             $features = mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
 
             foreach ($features as $feature) {
