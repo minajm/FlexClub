@@ -97,26 +97,34 @@ include_once('connect.php');
                 <?php
                 session_start();
 
+
+
+                if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
+                    /* users can see their selves comments and admint can see all the comments the users put in contact Us page */
+                    echo '
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact_us_manage.php" >Comments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-info" href="./logout.php">Logout</a>
+                            </li>
+                            
+                        ';
+                } else {
+                    echo '
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="./login.php" >Login</a>
+                            </li>
+                        ';
+                }
+
                 if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { // admin
                     echo '
                         <li class="nav-item">
                                 <a class="nav-link"  href="./admin_edit_index.php">Dashboard</a>
                         </li>
                     ';
-                }
-
-                if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
-                    echo '
-                            <li class="nav-item">
-                                <a class="nav-link text-info" href="./logout.php">Logout</a>
-                            </li>
-                        ';
-                } else {
-                    echo '
-                            <li class="nav-item">
-                                <a class="nav-link" href="./login.php" >Login</a>
-                            </li>
-                        ';
                 }
 
 
