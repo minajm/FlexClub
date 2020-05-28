@@ -25,9 +25,6 @@ include_once('header.php');
                             <h5 class="card-title">
                                 <?= $feature['title']; ?>
                             </h5>
-                            <p class="card-text">
-                                <?= $feature['summery']; ?>
-                            </p>
                         </div>
                         <div class="card-footer bg-white">
                             <a class="btn btn-link text-dark  mt-1 h3 d-flex justify-content-center "

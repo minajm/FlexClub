@@ -3,19 +3,20 @@ include_once('header.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (isset($_GET['id'])) {
-        $calssId = $_GET['id'];
-        $sql = "SELECT * FROM class where id = $calssId";
-
-        $name = "";
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM class where id = $id";
+        $title = "";
         $summery = "";
-        $photo_link = "";
+        $image = "";
+        $link = "";
         $result = mysqli_query($connection, $sql);
         if ($result != false) {
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $name = $row['name'];
+                    $title = $row['title'];
+                    $image = $row['image'];
                     $summery = $row['summery'];
-                    $photo_link = $row['photo_link'];
+                    $link = $row['link'];
 
                 }
             }
@@ -24,22 +25,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 ?>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <img src="<?php echo $photo_link ?>" class="img-fluid" alt="Responsive image">
+        <div class="card mt-5 mb-5">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="<?php echo $image ?>" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <?php
+                            echo $title;
+                            ?>
+                        </h5>
+                        <p class="card-text">
+                            <?php
+                            echo $summery;
+                            ?>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row mt-4 border">
-            <div class="col-md-12">
-                <?php
-                echo $summery;
-                ?>
+            <div class="card-footer">
+                <a class="btn btn-link text-dark  mt-1 h3 d-flex justify-content-center "
+                   href="<?php echo $link ?>" role="button">
+                    link
+                </a>
             </div>
-        </div>
-        <div class="row mt-4">
-            <a class="btn  btn-primary btn-block" href="class_enroll.php?id=<?php echo $calssId; ?>">Enroll</a>
         </div>
     </div>
 
 <?php
 include_once('footer.php');
+
