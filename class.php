@@ -1,3 +1,6 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad  / Student Number: -->
+
 <?php
 include_once('header.php');
 ?>
