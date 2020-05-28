@@ -3,9 +3,6 @@ include_once('header.php');
 if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
     ?>
 
-
-
-
     <div class="container-fluid">
         <div class="row">
             <?php
@@ -13,9 +10,6 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
             ?>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-
-
-
 
                 <?php
                 $sql = "SELECT COUNT(*) FROM testimonial";
@@ -44,15 +38,15 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
                         if (!is_null($result)) {
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
-                                    $shown="";
-                                    if ($row["approved_by_admin"] ==1){
-                                        $shown ="Yes";
-                                    }else{
-                                        $shown ="NO";
+                                    $shown = "";
+                                    if ($row["approved_by_admin"] == 1) {
+                                        $shown = "Yes";
+                                    } else {
+                                        $shown = "NO";
                                     }
                                     echo '<tr>
                                             <td>' . $row["id"] . '</td>
-                                            <td>' . $row["reviewer_name"] .'</td>
+                                            <td>' . $row["reviewer_name"] . '</td>
                                             <td>' . $row["review_body"] . '</td>
                                             <td>' . $shown . '</td>
                                         </tr>';
@@ -65,12 +59,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
                 </div>
 
 
-
-
-
-
-
-<hr>
+                <hr>
 
 
                 <h2 class="text-center mt-2">Customer Reviews</h2>
@@ -116,9 +105,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
         </div>
     </div>
     <?php
-}
-
-else {
+} else {
     header('Location: http://localhost/HassanProject/login.php');
 }
 include_once('footer.php');

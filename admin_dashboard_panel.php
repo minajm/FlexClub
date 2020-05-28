@@ -11,9 +11,14 @@
                     Users
                 </a>
             </li>
-            <li class="nav-item text-">
+            <li class="nav-item ">
                 <a class="nav-link text-light" href="./admin_edit_testimonial.php">
                     Testimonials
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-light " href="./admin_edit_fee.php">
+                    Fee
                 </a>
             </li>
             <li class="nav-item ">

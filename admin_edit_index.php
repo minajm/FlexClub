@@ -56,8 +56,7 @@ function renderForm($connection, $action, $id=null) {
         $result = mysqli_query($connection, $sql);
 
         if (!is_null($result)) {
-            $row = $result->fetch_assoc();
-
+            $row = $result->fetch_assoc();s
             $title = $row['title'];
             $description = $row['description'];
             $link = $row['link'];

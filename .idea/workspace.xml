@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin_edit_fee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/class_details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_details_edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_dashboard_panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_dashboard_panel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_edit_index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_edit_index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_edit_testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_edit_testimonial.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +79,11 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="StructuralSearchPlugin">
+    <searchConfiguration name="user defined" created="1590662200931" text="admin_panel_membership.php" recursive="true" caseInsensitive="true" type="PHP" scope_type="PROJECT" scope_descriptor="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </searchConfiguration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -92,7 +99,7 @@
       <workItem from="1590173730096" duration="69000" />
       <workItem from="1590178123852" duration="43983000" />
       <workItem from="1590430971327" duration="2918000" />
-      <workItem from="1590517590362" duration="50678000" />
+      <workItem from="1590517590362" duration="55989000" />
     </task>
     <servers />
   </component>
@@ -136,6 +143,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="373" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1590272850299" />
+    <state x="370" y="222" width="927" height="331" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1590662200911">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="370" y="222" width="927" height="331" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1280.800@0.0.1280.800" timestamp="1590662200911" />
     <state x="326" y="102" key="#registration.php" timestamp="1590536233284">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -160,15 +171,19 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="832" height="184" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1588946051990" />
-    <state x="416" y="327" key="NewPhpFileDialog" timestamp="1590525239824">
+    <state x="416" y="327" key="NewPhpFileDialog" timestamp="1590661917093">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="416" y="327" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1590525239824" />
+    <state x="416" y="327" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1590661917093" />
     <state x="416" y="341" key="NewPhpFileDialog/0.23.1280.777@0.23.1280.777" timestamp="1590488651103" />
     <state x="141" y="50" key="SettingsEditor" timestamp="1590189431251">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1590189431251" />
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1590662089527">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.0.1280.800@0.0.1280.800" timestamp="1590662089527" />
     <state x="388" y="152" width="566" height="461" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1588944209325">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -177,13 +192,17 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.23.1280.777@0.23.1280.777" timestamp="1588943741118" />
+    <state x="338" y="155" width="604" height="490" key="find.popup" timestamp="1590662345731">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="338" y="155" width="604" height="490" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1590662345731" />
     <state x="305" y="186" key="run.anything.popup" timestamp="1588946018043">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="305" y="186" key="run.anything.popup/0.23.1280.777@0.23.1280.777" timestamp="1588946018043" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1590609636059">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1590662089498">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1590609636059" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1590662089498" />
   </component>
 </project>
