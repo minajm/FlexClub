@@ -77,9 +77,8 @@ include_once('header.php');
             New Classes
         </p>
 
-
         <?php
-          $features = mysqli_fetch_all($connection->query("select * from home;"), MYSQLI_ASSOC);
+          $features = mysqli_fetch_all($connection->query("select * from home where type='class';"), MYSQLI_ASSOC);
 
           foreach ($features as $feature) {
         ?>
@@ -87,7 +86,7 @@ include_once('header.php');
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src=" <?= $feature['image']; ?>" class="card-img mh-50 " alt="Student Offer">
+                    <img src="<?= $feature['image']; ?>" class="card-img mh-50 " alt="Student Offer">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">

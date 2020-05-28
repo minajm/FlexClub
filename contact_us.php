@@ -51,9 +51,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
 
         $message = htmlspecialchars($_POST['message']);
+        $user_id = null;
 
-        $query = "INSERT INTO contact_us(name ,email,phone_number,message) values 
-            ('". $name ."','". $email ."','". $mobile ."','". $message ."')";
+        if (isset($_SESSION['id'])) {
+            $user_id = $_SESSION['id'];
+        }
+
+        $query = "INSERT INTO contact_us(name ,email,phone_number,message, user_id) values 
+            ('". $name ."','". $email ."','". $mobile ."','". $message ."', '". $user_id . "')";
 
         $result = mysqli_query($connection, $query);
 

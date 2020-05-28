@@ -1,4 +1,7 @@
 <?php
+include_once('header.php');
+
+session_start();
 
 $success_alert = '<div class="col-12">
 	<div class="alert alert-success">SUCCESS</div>
@@ -40,6 +43,11 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1 ) {
                     <tbody>
                     <?php
                     $query = "SELECT * FROM contact_us";
+
+                    if (!$_SESSION['is_admin']) {
+                        $query .= " where user_id='" . $_SESSION['id'] . "'";
+                    }
+
                     $result = mysqli_query($connection, $query);    // object or null
 
                     if (!is_null($result)) {
@@ -73,3 +81,6 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1 ) {
 else {
     echo '<h3 class="text-danger text-center">You do not Login yet</h3>';
 }
+
+
+include_once('footer.php');
