@@ -22,25 +22,31 @@ include_once('header.php');
         <div class="card-deck">
 
             <?php
-            <!--below its a command or quercy which will request the information from class for select -->
+            
+            <!-- below its a command or quercy which will request the information from class for "select" -->
             $features = mysqli_fetch_all($connection->query("select * from class;"), MYSQLI_ASSOC);
-
+              
             foreach ($features as $feature) {
                 ?>
+                
                 <!-- This class will define the coloumn and its location -->
                 <div class="col-md-4">
                    <!-- The card is defned under this class  -->
                     <div class="card  mb-3">
                         <!-- Below it will define the image which would explain the class placed the image which represent the flex club class foto -->
                         <img src=" <?= $feature['image']; ?>" class="card-img-top mh-50 " alt="Flex club Class Photo">
-                         
+                         <!-- Below the class defines the class body-->
                           <div class="card-body">
+                            <!-- Below this class will define the card title  -->
                             <h5 class="card-title">
                                 <?= $feature['title']; ?>
                             </h5>
                         </div>
+                        <!--  Class footer which appear in white is defined in this class-->
                         <div class="card-footer bg-white">
+                            <!-- Under this class the button link which is dark text and its parameter which positioned the content to be in center -->
                             <a class="btn btn-link text-dark  mt-1 h3 d-flex justify-content-center "
+                                
                                href="class_details.php?id=<?= $feature['id']; ?>" role="button">More Detail</a>
                         </div>
                     </div>
