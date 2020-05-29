@@ -17,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $link = $_POST['link'];
 
 
-    if ($_FILES["photo"]) {
+    if ($_FILES["photo"]["name"]) {
         $target_dir = "./image/upload/";
-        $target_file = $target_dir . basename($_FILES["photo"]["name"]);
+        $target_file = $target_dir . time() . basename($_FILES["photo"]["name"]);
 
         $check = getimagesize($_FILES["photo"]["tmp_name"]);
 
@@ -41,6 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } else if ($action === 'edit') {
         $id = $_GET['id'];
         $connection->query('UPDATE class SET title="' . $title . '", summery="' . $summery . '", image="' . $photo . '", link="'.$link.'" WHERE id = ' . $id . ';');
+    }
+
+    if ($photo != "") {
+        $connection->query('UPDATE home SET image="' . $photo . '" WHERE id = ' . $id . ';');
     }
 
     echo "<script>window.location.replace(\"/FlexClub/admin_edit_class.php\");</script>";

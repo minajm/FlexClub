@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         <div class="card mt-5 mb-5">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="' . $image . ' " class="card-img" alt="...">
+                    <img src="' . $image . ' " class="card-img" style="max-height:300px ">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -46,10 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     </div>
                 </div>
             </div>
-            <div class="card-footer">
-                <a class="btn btn-link text-dark  mt-1 h3 d-flex justify-content-center "
+            <div class="card-footer bg-dark">
+                <a class="btn btn-link text-light  mt-1 h3 d-flex justify-content-center "
                    href=" ' . $link . ' " role="button">
-                    link
+                    Document
                 </a>
             </div>
         </div>
