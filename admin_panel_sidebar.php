@@ -13,7 +13,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-light" href="./admin_edit_testimonial.php">
+                    <a class="nav-link text-light" href="./testimonial_manage.php">
                         Testimonials
                     </a>
                 </li>

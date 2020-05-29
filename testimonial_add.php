@@ -2,7 +2,7 @@
 <?php
 
 if (!isset($_SESSION['id'])) {
-    die('please login first');
+    die('');
 }
 
 $result = mysqli_query($connection, 'select * from user where id="' . $_SESSION['id'] . '"');
