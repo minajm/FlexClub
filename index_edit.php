@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $connection->query('UPDATE home SET image="' . $photo . '" WHERE id = ' . $id . ';');
     }
 
-    echo "<script>window.location.replace(\"/FlexClub/index_edit.php\");</script>";
+    echo "<script>window.location.replace(\"" . BASE_URL ."/index_edit.php\");</script>";
 }
 
 function renderForm($connection, $action, $id = null)

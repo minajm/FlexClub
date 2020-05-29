@@ -223,8 +223,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     ('" . $user_id . "', '" . $class_id . "', '" . $fee_id . "')";
 
             if (mysqli_query($connection, $query)) {
-                header('Location: /FlexClub');
-                echo "<script>window.location.replace(\"/FlexClub\");</script>";
+                header('Location: ' . BASE_URL);
+                echo "<script>window.location.replace(\"" . BASE_URL ."\");</script>";
 
                 die();
             } else {

@@ -63,8 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $result = mysqli_query($connection, $query);
 
         if ($result != false) {
-            header('Location: /FlexClub');
-            echo "<script>window.location.replace(\"/FlexClub\");</script>";
+            header('Location: ' . BASE_URL);
+            echo "<script>window.location.replace(\"" . BASE_URL ."\");</script>";
 
             die();
         } else {

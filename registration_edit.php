@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $connection->query('UPDATE fee SET amount="' . $amount . '", name="' . $name . '", benefits="' . $benefits . '" WHERE id = ' . $id . ';');
     }
 
-    echo "<script>window.location.replace(\"/FlexClub/registration_edit.php\");</script>";
+    echo "<script>window.location.replace(\"" . BASE_URL . "/registration_edit.php\");</script>";
 }
 
 function renderForm($connection, $action, $id = null)

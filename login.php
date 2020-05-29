@@ -79,9 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                 // set  a cookie for a month
                 setcookie("user_email", $_POST['user_email'], time() + (86400 * 30), '/');
-                header('Location: /FlexClub');
-
-                echo "<script>window.location.replace(\"/FlexClub\");</script>";
+                header('Location: ' . BASE_URL);
+                echo "<script>window.location.replace(\"" . BASE_URL ."\");</script>";
 
                 die();
             } else {
