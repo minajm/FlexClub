@@ -22,11 +22,7 @@
                         Registration Fee
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link text-light " href="./admin_edit_membership.php">
-                        Memberships
-                    </a>
-                </li>
+
                 <li class="nav-item ">
                     <a class="nav-link text-light" href="./admin_edit_contact_us.php">
                         Contacts
