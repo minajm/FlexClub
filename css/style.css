@@ -42,6 +42,7 @@ pre {
 img{
     opacity: 0.9;
 }
+
 /*********Testimonial*****************************/
 .Testimonial {
     border: 1px solid #efefef;
@@ -315,30 +316,6 @@ img{
 
 }
 
-.Features .inp input{
-
-    margin-left: 20px;
-
-}
-.Features textarea{
-    margin-left: 20px;
-
-}
-
-
-.Features{
-
-    width: 100%;
-    overflow: hidden;
-}
-.featAndimg{
-    float: left;
-    width: 70%;
-}
-.login{
-    float: right;
-    width: 25%;
-}
 .feat{
 
     width: 100%;

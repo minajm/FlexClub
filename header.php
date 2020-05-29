@@ -68,7 +68,7 @@ include_once('connect.php');
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./testimonial.php">Testimonial</a>
-                        <a class="dropdown-item" href="#">Trainers</a>
+                        <a class="dropdown-item" href="./trainers.php">Trainers</a>
                         <a class="dropdown-item" href="./gallery.php">Gallery</a>
                     </div>
                 </li>

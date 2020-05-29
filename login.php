@@ -8,7 +8,7 @@ function printForm()
 <!-- Material form login -->
 <div class="card w-50 m-5">
 
-  <h5 class="card-header  bg-light info-color white-text text-center py-4">
+  <h5 class="card-header text-secondary  bg-light info-color white-text text-center py-4">
     <strong>Sign in</strong>
   </h5>
 
@@ -20,14 +20,12 @@ function printForm()
 
       <!-- Email -->
       <div class="md-form">
-        <input type="email" id="user_email" name="user_email" class="form-control">
-        <label for="materialLoginFormEmail">E-mail</label>
+        <input type="email" id="user_email" name="user_email" class="form-control" placeholder="Email">
       </div>
 
       <!-- Password -->
       <div class="md-form">
-        <input type="password" id="user_password" name="user_password" class="form-control">
-        <label for="materialLoginFormPassword">Password</label>
+        <input type="password" id="user_password" name="user_password" class="form-control mt-4" placeholder="Password">
       </div>
 
 
