@@ -55,11 +55,12 @@ include_once('header.php');
 
                             } else {
                             echo '
+                            <li class="btn btn-link text-light  mt-1 h3 d-flex justify-content-center">
 
-                            <<a class="btn btn-link text-light  mt-1 h3 d-flex justify-content-center "
+                            <a class="btn btn-link text-light  mt-1 h3 d-flex justify-content-center "
 
                                href="./login.php" role="button">More Detail</a>
-                            </div>
+                               </li>
                             ';
                             }
                             ?>
