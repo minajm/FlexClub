@@ -57,27 +57,9 @@ include_once('connect.php');
                 <li class="nav-item">
                     <a class="nav-link" href="./class.php">Classes</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Registration
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <?php
-                        session_start();
 
-                        if (isset($_SESSION['status']) && $_SESSION['status'] !== 1) {
-                            echo '
-                                <a class="nav-link text-danger" href="./logout.php"></a>
-                        ';
-                        } else {
-                            echo '
-                                  <a class="dropdown-item" href="./registration.php">Register</a>
-                        ';
-                        }
-                        ?>
-                        
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="./registration.php">Registration</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -96,13 +78,19 @@ include_once('connect.php');
 
                 <?php
                 session_start();
-
-                if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
+                if (isset($_SESSION['status']) && $_SESSION['status'] == 1 && isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 0) {
                     /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
                     echo '
                             <li class="nav-item">
-                                <a class="nav-link" href="./contact_us_manage.php" >Comments</a>
+                                <a class="nav-link text-warning" href="./contact_us_manage.php" >My Comments</a>
                             </li>
+                            
+                        ';
+                }
+                if (isset($_SESSION['status']) && $_SESSION['status'] == 1 ) {
+                    /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
+                    echo '
+   
                             <li class="nav-item">
                                 <a class="nav-link text-info" href="./logout.php">Logout</a>
                             </li>

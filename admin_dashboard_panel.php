@@ -24,8 +24,8 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link text-light" href="./admin_edit_contact_us.php">
-                        Contacts
+                    <a class="nav-link text-light" href="./contact_us_manage.php">
+                        Users Comments
                     </a>
                 </li>
                 <li class="nav-item ">
