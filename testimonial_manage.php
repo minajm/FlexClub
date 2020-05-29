@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 ?>
                 <h2>Testimonials<span class="float-right"><?php echo "Count : " . $testimonials_count; ?></span></h2>
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
+                    <table class="table table-sm">
                         <thead class="thead-dark">
                         <tr>
                             <th>#</th>
