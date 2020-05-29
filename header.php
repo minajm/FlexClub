@@ -76,7 +76,7 @@ include_once('connect.php');
                         ';
                         }
                         ?>
-                        <a class="dropdown-item" href="./membership.php">Membership</a>
+                        
                     </div>
                 </li>
                 <li class="nav-item dropdown">

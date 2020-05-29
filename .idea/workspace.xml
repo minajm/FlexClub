@@ -21,7 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_dashboard_panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_dashboard_panel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_edit_membership.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/membership.php" beforeDir="false" afterPath="$PROJECT_DIR$/membership.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/membership_edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/membership_enroll.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +107,7 @@
       <workItem from="1590173730096" duration="69000" />
       <workItem from="1590178123852" duration="43983000" />
       <workItem from="1590430971327" duration="2918000" />
-      <workItem from="1590517590362" duration="94473000" />
+      <workItem from="1590517590362" duration="95077000" />
     </task>
     <servers />
   </component>
@@ -144,10 +148,10 @@
     </state>
     <state x="366" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1590681919166" />
     <state x="366" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1590488448365" />
-    <state x="373" y="145" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590704170046">
+    <state x="373" y="145" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590742620325">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="373" y="145" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1590704170046" />
+    <state x="373" y="145" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1590742620325" />
     <state x="373" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1590272850299" />
     <state x="370" y="222" width="927" height="331" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1590662200911">
       <screen x="0" y="0" width="1280" height="800" />
@@ -206,10 +210,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.23.1280.777@0.23.1280.777" timestamp="1588943741118" />
-    <state x="338" y="155" width="604" height="490" key="find.popup" timestamp="1590704663217">
+    <state x="338" y="155" width="604" height="490" key="find.popup" timestamp="1590742528986">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="338" y="155" width="604" height="490" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1590704663217" />
+    <state x="338" y="155" width="604" height="490" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1590742528986" />
     <state x="305" y="186" key="run.anything.popup" timestamp="1588946018043">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
