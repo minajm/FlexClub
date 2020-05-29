@@ -1,5 +1,8 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <?php
-include ('header.php');
+include('header.php');
 include "admin_panel_check.php";
 
 $action = null;
@@ -37,10 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     if ($action === 'new') {
-        $connection->query('INSERT INTO home (title, description, link, type) VALUES ("'. $title .'", "'. $description .'", "'. $link .'", "'.$type.'");');
+        $connection->query('INSERT INTO home (title, description, link, type) VALUES ("' . $title . '", "' . $description . '", "' . $link . '", "' . $type . '");');
     } else if ($action === 'edit') {
         $id = $_GET['id'];
-        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", link="'.$link.'", type="'.$type.'" WHERE id = ' . $id . ';');
+        $connection->query('UPDATE home SET title="' . $title . '", description="' . $description . '", link="' . $link . '", type="' . $type . '" WHERE id = ' . $id . ';');
     }
 
     if ($photo != "") {
@@ -50,7 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     echo "<script>window.location.replace(\"/FlexClub/index_edit.php\");</script>";
 }
 
-function renderForm($connection, $action, $id=null) {
+function renderForm($connection, $action, $id = null)
+{
     $title = "";
     $description = "";
     $link = "";
@@ -85,10 +89,10 @@ function renderForm($connection, $action, $id=null) {
   <input type=\"text\" id=\"link\" name=\"link\" value='" . $link . "'><br>
   
   <label for=\"description\">Description:</label><br>
-  <textarea  id=\"description\" name=\"description\">" . $description. "</textarea><br>
+  <textarea  id=\"description\" name=\"description\">" . $description . "</textarea><br>
   
   <div class=\"form-check\"></div>
-   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type1\" value=\"class\"  " . ($type == 'class' ? 'checked' : ''). ">
+   <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type1\" value=\"class\"  " . ($type == 'class' ? 'checked' : '') . ">
    <label class=\"form-check-label\" for=\"type1\">New Class</label>
    <br>
    <input class=\"form-check-input\" type=\"radio\" name=\"type\" id=\"type2\" value=\"event\" " . ($type == 'event' ? 'checked' : '') . ">
@@ -101,79 +105,79 @@ function renderForm($connection, $action, $id=null) {
 
 ?>
 
-    <div class="container-fluid">
-        <div class="row">
+<div class="container-fluid">
+    <div class="row">
+        <?php
+        include_once('admin_panel_sidebar.php');
+        ?>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <?php
-            include_once('admin_panel_sidebar.php');
+            $sql = "SELECT COUNT(*) FROM home";
+            $result = mysqli_query($connection, $sql);
+
+            if (!is_null($result)) {
+                $row = $result->fetch_assoc();
+                $features_count = $row['COUNT(*)'];
+            }
+            ?>
+            <h3 class="mt-3 mb-3 text-dark">Feature Boxes<span class="float-right">
+                        <?php echo "Count : " . $features_count; ?></span>
+            </h3>
+
+            <a class="text-decoration-none text-danger mb-3" href="./index_edit.php?new">Add new feature box</a>
+
+            <br>
+            <?php
+            if ($action != null) {
+                echo renderForm($connection, $action, $_GET['id']);
+            }
             ?>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-                <?php
-                $sql = "SELECT COUNT(*) FROM home";
-                $result = mysqli_query($connection, $sql);
+            <br>
 
-                if (!is_null($result)) {
-                    $row = $result->fetch_assoc();
-                    $features_count = $row['COUNT(*)'];
-                }
-                ?>
-                <h3 class="mt-3 mb-3 text-dark">Feature Boxes<span class="float-right">
-                        <?php echo "Count : " . $features_count; ?></span>
-                </h3>
+            <div class="table-responsive">
+                <table class="table table-sm mt-5">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                        <th>Type</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $query = "SELECT * FROM home";
+                    $result = mysqli_query($connection, $query);    // object or null
 
-                <a class="text-decoration-none text-danger mb-3" href="./index_edit.php?new">Add new feature box</a>
-
-                <br>
-                <?php
-                if ($action != null) {
-                    echo renderForm($connection, $action, $_GET['id']);
-                }
-                ?>
-
-                <br>
-
-                <div class="table-responsive">
-                    <table class="table table-sm mt-5">
-                        <thead class="thead-dark">
-                        <tr>
-                            <th>#</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Link</th>
-                            <th>Type</th>
-                            <th>Image</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $query = "SELECT * FROM home";
-                        $result = mysqli_query($connection, $query);    // object or null
-
-                        if (!is_null($result)) {
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    echo '<tr>
+                    if (!is_null($result)) {
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<tr>
                                             <td>' . $row["id"] . '</td>
                                             <td>' . $row["title"] . '</td>
                                             <td>' . $row["description"] . '</td>
                                             <td>' . $row["link"] . '</td> 
                                             <td>' . $row["type"] . '</td>
                                             <td> 
-                                            '. '<img width="100" height="100" src="' . $row['image'] . '" >' . '
+                                            ' . '<img width="100" height="100" src="' . $row['image'] . '" >' . '
                                             </td> 
                                             <td><a href="index_edit.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
-                                }
                             }
                         }
-                        ?>
-                        </tbody>
-                    </table>
-                </div>
-            </main>
-        </div>
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </main>
     </div>
+</div>
 
 
 

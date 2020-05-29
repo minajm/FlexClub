@@ -1,3 +1,6 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <?php
 include_once('header.php');
 
@@ -58,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
 
         $query = "INSERT INTO contact_us(name ,email,phone_number,message, user_id) values 
-            ('". $name ."','". $email ."','". $mobile ."','". $message ."', '". $user_id . "')";
+            ('" . $name . "','" . $email . "','" . $mobile . "','" . $message . "', '" . $user_id . "')";
 
         $result = mysqli_query($connection, $query);
 
@@ -74,63 +77,64 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 ?>
 
-    <div class="container ">
-        <div class="row bg-dark pb-5 mt-3 pt-5 mb-5">
-            <div class="col text-center">
-                <h2 class="text-light">Contact Us</h2>
-                <p class="text-white-50">Need to get in touch with the Flex Club? We are all ears</p>
+<div class="container ">
+    <div class="row bg-dark pb-5 mt-3 pt-5 mb-5">
+        <div class="col text-center">
+            <h2 class="text-light">Contact Us</h2>
+            <p class="text-white-50">Need to get in touch with the Flex Club? We are all ears</p>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="card w-50 mt-2 mb-5">
+            <h5 class="card-header info-color text-secondary text-center py-4">
+                <strong>Contact us</strong>
+            </h5>
+
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+
+                <!-- Form -->
+                <form class="text-center" method="post" action="#!">
+
+                    <!-- Name -->
+                    <div class="md-form mt-3">
+                        <input type="text" name="name" placeholder="Name" class="form-control" required>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="md-form mt-3">
+                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="md-form mt-3">
+                        <input type="phone" name="phone" placeholder="Phone" class="form-control" required>
+                    </div>
+
+
+                    <!--Message-->
+                    <div class="md-form mt-3">
+                        <textarea name="message"" placeholder="Message" class="form-control md-textarea"
+                        rows="3"></textarea>
+                    </div>
+
+
+                    <!-- Send button -->
+                    <button class="btn btn-dark btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">
+                        Submit
+                    </button>
+
+                </form>
+                <!-- Form -->
+
             </div>
         </div>
-        <div class="d-flex justify-content-center">
-            <div class="card w-50 mt-2 mb-5">
-                <h5 class="card-header info-color text-secondary text-center py-4">
-                    <strong>Contact us</strong>
-                </h5>
-
-                <!--Card content-->
-                <div class="card-body px-lg-5 pt-0">
-
-                    <!-- Form -->
-                    <form class="text-center" method="post"  action="#!">
-
-                        <!-- Name -->
-                        <div class="md-form mt-3">
-                            <input type="text" name="name" placeholder="Name" class="form-control" required>
-                        </div>
-
-                        <!-- E-mail -->
-                        <div class="md-form mt-3">
-                            <input type="email" name="email" placeholder="Email" class="form-control" required>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="md-form mt-3">
-                            <input type="phone" name="phone" placeholder="Phone" class="form-control" required>
-                        </div>
-
-
-                        <!--Message-->
-                        <div class="md-form mt-3">
-                            <textarea name="message"" placeholder="Message"  class="form-control md-textarea" rows="3"></textarea>
-                        </div>
-
-
-                        <!-- Send button -->
-                        <button class="btn btn-dark btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Submit</button>
-
-                    </form>
-                    <!-- Form -->
-
-                </div>
-            </div>
-        </div>
-        <div>
-
-        </div>
-
-
+    </div>
+    <div>
 
     </div>
+
+</div>
 
 
 <?php

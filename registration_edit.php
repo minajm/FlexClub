@@ -1,5 +1,8 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <?php
-include ('header.php');
+include('header.php');
 include "admin_panel_check.php";
 
 $action = null;
@@ -16,9 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $benefits = $_POST['benefits'];
 
 
-
     if ($action === 'new') {
-        $connection->query('INSERT INTO fee (amount, name, benefits) VALUES ("'. $amount .'", "'. $name .'", "'. $benefits .'");');
+        $connection->query('INSERT INTO fee (amount, name, benefits) VALUES ("' . $amount . '", "' . $name . '", "' . $benefits . '");');
     } else if ($action === 'edit') {
         $id = $_GET['id'];
         $connection->query('UPDATE fee SET amount="' . $amount . '", name="' . $name . '", benefits="' . $benefits . '" WHERE id = ' . $id . ';');
@@ -27,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     echo "<script>window.location.replace(\"/FlexClub/registration_edit.php\");</script>";
 }
 
-function renderForm($connection, $action, $id=null) {
+function renderForm($connection, $action, $id = null)
+{
     $amount = "";
     $summery = "";
     $link = "";
@@ -59,7 +62,7 @@ function renderForm($connection, $action, $id=null) {
   <input type=\"text\" id=\"name\" name=\"name\" value='" . $name . "'><br>
   
   <label for=\"benefits\">Benefits:</label><br>
-  <textarea   id=\"benefits\" name=\"benefits\" >". $benefits ."</textarea>
+  <textarea   id=\"benefits\" name=\"benefits\" >" . $benefits . "</textarea>
   <br><br>
   <input type=\"submit\" value=\"Submit\">
 </form>";
@@ -67,59 +70,59 @@ function renderForm($connection, $action, $id=null) {
 
 ?>
 
-    <div class="container-fluid">
-        <div class="row">
+<div class="container-fluid">
+    <div class="row">
+        <?php
+        include_once('admin_panel_sidebar.php');
+        ?>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <?php
-            include_once('admin_panel_sidebar.php');
+            $sql = "SELECT COUNT(*) FROM fee";
+            $result = mysqli_query($connection, $sql);
+
+            if (!is_null($result)) {
+                $row = $result->fetch_assoc();
+                $features_count = $row['COUNT(*)'];
+            }
+            ?>
+            <h3 class="mt-3 mb-3 text-dark">Registration Fee<span class="float-right">
+                        <?php echo "Count : " . $features_count; ?></span>
+            </h3>
+
+            <a class="text-decoration-none text-danger" mb-3" href="./registration_edit.php?new">
+            Add new Fee
+            </a>
+            <br>
+            <?php
+            if ($action != null) {
+                echo renderForm($connection, $action, $_GET['id']);
+            }
             ?>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-                <?php
-                $sql = "SELECT COUNT(*) FROM fee";
-                $result = mysqli_query($connection, $sql);
+            <br>
 
-                if (!is_null($result)) {
-                    $row = $result->fetch_assoc();
-                    $features_count = $row['COUNT(*)'];
-                }
-                ?>
-                <h3 class="mt-3 mb-3 text-dark">Registration Fee<span class="float-right">
-                        <?php echo "Count : " . $features_count; ?></span>
-                </h3>
+            <div class="table-responsive">
+                <table class="table  table-sm">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>amount</th>
+                        <th>name</th>
+                        <th>benefits</th>
+                        <th>Action</th>
 
-                <a class="text-decoration-none text-danger" mb-3" href="./registration_edit.php?new">
-                    Add new Fee
-                </a>
-                <br>
-                <?php
-                if ($action != null) {
-                    echo renderForm($connection, $action, $_GET['id']);
-                }
-                ?>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $query = "SELECT * FROM fee";
+                    $result = mysqli_query($connection, $query);    // object or null
 
-                <br>
-
-                <div class="table-responsive">
-                    <table class="table  table-sm">
-                        <thead class="thead-dark">
-                        <tr>
-                            <th>#</th>
-                            <th>amount</th>
-                            <th>name</th>
-                            <th>benefits</th>
-                            <th>Action</th>
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $query = "SELECT * FROM fee";
-                        $result = mysqli_query($connection, $query);    // object or null
-
-                        if (!is_null($result)) {
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    echo '
+                    if (!is_null($result)) {
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo '
                                         <tr>
                                             <td>' . $row["id"] . '</td>
                                             <td>' . $row["amount"] . '</td>
@@ -127,15 +130,15 @@ function renderForm($connection, $action, $id=null) {
                                             <td>' . $row["benefits"] . '</td>
                                             <td><a href="registration_edit.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
-                                }
                             }
                         }
-                        ?>
-                        </tbody>
-                    </table>
-                </div>
-            </main>
-        </div>
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </main>
     </div>
+</div>
 
 

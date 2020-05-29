@@ -1,3 +1,6 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <!-- Footer -->
 
 <footer class="page-footer font-small bg-dark pt-4">
@@ -14,7 +17,8 @@
                 <!-- Content -->
                 <h6 class="text-uppercase font-weight-bold text-light">Flex Club</h6>
                 <hr class="text-secondary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p class="text-secondary">Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                <p class="text-secondary">Here you can use rows and columns to organize your footer content. Lorem ipsum
+                    dolor sit amet,
                     consectetur
                     adipisicing elit.</p>
 
@@ -28,7 +32,7 @@
                 <h6 class="text-uppercase font-weight-bold text-light">CATEGORIES</h6>
                 <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a  class="text-decoration-none text-secondary" href="#!">Classes</a>
+                    <a class="text-decoration-none text-secondary" href="#!">Classes</a>
                 </p>
                 <p>
                     <a class="text-decoration-none text-secondary" href="#!">Testimonials</a>
@@ -50,16 +54,19 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold text-light" >Contact</h6>
+                <h6 class="text-uppercase font-weight-bold text-light">Contact</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a  class="text-decoration-none text-secondary" href="#!"><i class="fas fa-home mr-3"></i> Dublin, City Center, Jervis Street</a>
+                    <a class="text-decoration-none text-secondary" href="#!"><i class="fas fa-home mr-3"></i> Dublin,
+                        City Center, Jervis Street</a>
                 </p>
                 <p>
-                    <a class="text-decoration-none text-secondary" href="mailto:info@example.com"><i class="fas fa-envelope mr-3"></i> info@example.com</a>
+                    <a class="text-decoration-none text-secondary" href="mailto:info@example.com"><i
+                                class="fas fa-envelope mr-3"></i> info@example.com</a>
                 </p>
                 <p>
-                    <a class="text-decoration-none text-secondary href="tel:+353-061-4486165"><i class="fas fa-phone mr-3"></i>+353-061-4486165</a>
+                    <a class="text-decoration-none text-secondary href=" tel:+353-061-4486165"><i
+                            class="fas fa-phone mr-3"></i>+353-061-4486165</a>
                 </p>
 
 

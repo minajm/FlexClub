@@ -1,3 +1,6 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <?php
 include_once('connect.php');
 ?>
@@ -36,88 +39,88 @@ include_once('connect.php');
 
 <!-- Start Header -->
 <div class="container">
-<div class="navb">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent static-top">
-        <!-- Brand/logo -->
-        <a class="navbar-brand text-secondary h1 font-weight-bold mt-1" href="index.php">
-            FLEX CLUB
-        </a>
+    <div class="navb">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent static-top">
+            <!-- Brand/logo -->
+            <a class="navbar-brand text-secondary h1 font-weight-bold mt-1" href="index.php">
+                FLEX CLUB
+            </a>
 
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./class.php">Classes</a>
-                </li>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./class.php">Classes</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="./registration.php">Registration</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./testimonial.php">Testimonial</a>
-                        <a class="dropdown-item" href="./trainers.php">Trainers</a>
-                        <a class="dropdown-item" href="./gallery.php">Gallery</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contact_us.php">Contact us</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registration.php">Registration</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./testimonial.php">Testimonial</a>
+                            <a class="dropdown-item" href="./trainers.php">Trainers</a>
+                            <a class="dropdown-item" href="./gallery.php">Gallery</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact_us.php">Contact us</a>
+                    </li>
 
-                <?php
-                session_start();
-                if (isset($_SESSION['status']) && $_SESSION['status'] == 1 && isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 0) {
-                    /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
-                    echo '
+                    <?php
+                    session_start();
+                    if (isset($_SESSION['status']) && $_SESSION['status'] == 1 && isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 0) {
+                        /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
+                        echo '
                             <li class="nav-item">
                                 <a class="nav-link text-warning" href="./contact_us_manage.php" >My Comments</a>
                             </li>
                             
                         ';
-                }
-                if (isset($_SESSION['status']) && $_SESSION['status'] == 1 ) {
-                    /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
-                    echo '
+                    }
+                    if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
+                        /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
+                        echo '
    
                             <li class="nav-item">
                                 <a class="nav-link text-info" href="./logout.php">Logout</a>
                             </li>
                             
                         ';
-                } else {
-                    echo '
+                    } else {
+                        echo '
                             
                             <li class="nav-item">
                                 <a class="nav-link" href="./login.php" >Login</a>
                             </li>
                         ';
-                }
+                    }
 
-                if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { // admin
-                    echo '
+                    if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { // admin
+                        echo '
                         <li class="nav-item ml-3 bg-dark">
                                 <a class="nav-link text-light "  href="index_edit.php">ADMIN PANEL</a>
                         </li>
                     ';
-                }
+                    }
 
-                ?>
-            </ul>
-        </div>
+                    ?>
+                </ul>
+            </div>
 
-    </nav>
-</div>
+        </nav>
+    </div>
 </div>
 <!-- End Header -->

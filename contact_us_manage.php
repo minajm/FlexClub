@@ -1,3 +1,6 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <?php
 include_once('header.php');
 
@@ -13,7 +16,7 @@ $fault_alert = '<div class="col-12">
 
 if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
     ?>
-    <div class="container-fluid mb-5 pb-5" >
+    <div class="container-fluid mb-5 pb-5">
         <div class="row">
             <?php
             if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) {

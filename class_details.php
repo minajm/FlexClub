@@ -1,3 +1,6 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <?php
 include_once('header.php');
 
@@ -25,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
 } ?>
 
-    <div class="container">
+<div class="container">
 
-        <?php
-        if (isset($_SESSION['status']) && $_SESSION['status'] == 1) { // logged IN
-            echo '
+    <?php
+    if (isset($_SESSION['status']) && $_SESSION['status'] == 1) { // logged IN
+        echo '
         <div class="card mt-5 mb-5">
             <div class="row no-gutters">
                 <div class="col-md-4">
@@ -54,16 +57,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             </div>
         </div>
         ';
-        } else {
-            echo '
+    } else {
+        echo '
       <div class="container">
         <div class="row ">
             <div class="text-danger text-center">You are not logged in, Please <a href="login.php"><b>login</b></a></div>
         </div>
     </div>  
     ';
-        } ?>
-    </div>
+    } ?>
+</div>
 
 <?php
 include_once('footer.php');

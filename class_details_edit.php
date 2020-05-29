@@ -1,5 +1,8 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
+
 <?php
-include ('header.php');
+include('header.php');
 include "admin_panel_check.php";
 
 $action = null;
@@ -37,10 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     if ($action === 'new') {
-        $connection->query('INSERT INTO class (title, summery, image, link) VALUES ("'. $title .'", "'. $summery .'", "'. $photo .'", "'. $link .'");');
+        $connection->query('INSERT INTO class (title, summery, image, link) VALUES ("' . $title . '", "' . $summery . '", "' . $photo . '", "' . $link . '");');
     } else if ($action === 'edit') {
         $id = $_GET['id'];
-        $connection->query('UPDATE class SET title="' . $title . '", summery="' . $summery . '", image="' . $photo . '", link="'.$link.'" WHERE id = ' . $id . ';');
+        $connection->query('UPDATE class SET title="' . $title . '", summery="' . $summery . '", image="' . $photo . '", link="' . $link . '" WHERE id = ' . $id . ';');
     }
 
     if ($photo != "") {
@@ -50,7 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     echo "<script>window.location.replace(\"/FlexClub/class_details_edit.php\");</script>";
 }
 
-function renderForm($connection, $action, $id=null) {
+function renderForm($connection, $action, $id = null)
+{
     $title = "";
     $summery = "";
     $link = "";
@@ -85,7 +89,7 @@ function renderForm($connection, $action, $id=null) {
   <input type=\"text\" id=\"link\" name=\"link\" value='" . $link . "'><br>
   
   <label for=\"summery\">Summery:</label><br>
-  <textarea  id=\"summery\" name=\"summery\">" . $summery. "</textarea>
+  <textarea  id=\"summery\" name=\"summery\">" . $summery . "</textarea>
    
   <br><br>
   
@@ -95,78 +99,78 @@ function renderForm($connection, $action, $id=null) {
 
 ?>
 
-    <div class="container-fluid">
-        <div class="row">
+<div class="container-fluid">
+    <div class="row">
+        <?php
+        include_once('admin_panel_sidebar.php');
+        ?>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <?php
-            include_once('admin_panel_sidebar.php');
+            $sql = "SELECT COUNT(*) FROM class";
+            $result = mysqli_query($connection, $sql);
+
+            if (!is_null($result)) {
+                $row = $result->fetch_assoc();
+                $features_count = $row['COUNT(*)'];
+            }
+            ?>
+            <h3 class="mt-3 mb-3 text-dark">All Classes<span class="float-right">
+                        <?php echo "Count : " . $features_count; ?></span>
+            </h3>
+
+            <a class="text-decoration-none text-danger mb-3" href="./class_details_edit.php?new">Add new Class</a>
+
+            <br>
+            <?php
+            if ($action != null) {
+                echo renderForm($connection, $action, $_GET['id']);
+            }
             ?>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-                <?php
-                $sql = "SELECT COUNT(*) FROM class";
-                $result = mysqli_query($connection, $sql);
+            <br>
 
-                if (!is_null($result)) {
-                    $row = $result->fetch_assoc();
-                    $features_count = $row['COUNT(*)'];
-                }
-                ?>
-                <h3 class="mt-3 mb-3 text-dark">All Classes<span class="float-right">
-                        <?php echo "Count : " . $features_count; ?></span>
-                </h3>
+            <div class="table-responsive">
+                <table class="table table-sm mt-5">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Summery</th>
+                        <th>Image</th>
+                        <th>Link</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $query = "SELECT * FROM class";
+                    $result = mysqli_query($connection, $query);    // object or null
 
-                <a class="text-decoration-none text-danger mb-3" href="./class_details_edit.php?new">Add new Class</a>
-
-                <br>
-                <?php
-                if ($action != null) {
-                    echo renderForm($connection, $action, $_GET['id']);
-                }
-                ?>
-
-                <br>
-
-                <div class="table-responsive">
-                    <table class="table table-sm mt-5">
-                        <thead class="thead-dark">
-                        <tr>
-                            <th>#</th>
-                            <th>Title</th>
-                            <th>Summery</th>
-                            <th>Image</th>
-                            <th>Link</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $query = "SELECT * FROM class";
-                        $result = mysqli_query($connection, $query);    // object or null
-
-                        if (!is_null($result)) {
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    echo '
+                    if (!is_null($result)) {
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo '
                                         <tr>
                                             <td>' . $row["id"] . '</td>
                                             <td>' . $row["title"] . '</td>
                                             <td>' . $row["summery"] . '</td>
                                             <td> 
-                                            '. '<img width="100" height="100" src="' . $row['image'] . '" >' . '
+                                            ' . '<img width="100" height="100" src="' . $row['image'] . '" >' . '
                                             </td>
                                             <td>' . $row["link"] . '</td>
                                             <td><a href="class_details_edit.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
-                                }
                             }
                         }
-                        ?>
-                        </tbody>
-                    </table>
-                </div>
-            </main>
-        </div>
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </main>
     </div>
+</div>
 
 
 

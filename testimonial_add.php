@@ -1,3 +1,5 @@
+<!--student 1: Mina Jamshidian / Student Number: 3013827-->
+<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
 
 <?php
 
@@ -15,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $class_name = $_POST['user_class_name'];
 
         $query = "INSERT INTO testimonial(comment, first_name, `date`, class_name) values 
-                ('". $comment ."', '". $first_name . "', CURDATE(),'".$class_name."')";
+                ('" . $comment . "', '" . $first_name . "', CURDATE(),'" . $class_name . "')";
 
         $result = mysqli_query($connection, $query);
 
@@ -45,53 +47,55 @@ function get_classes()
 
 ?>
 
-    <div class="container ">
-        <div class="d-flex justify-content-center">
-            <div class="card w-50 m-5">
-                <h5 class="card-header info-color text-secondary text-center py-4">
-                    <strong>Add Testimonial</strong>
-                </h5>
+<div class="container ">
+    <div class="d-flex justify-content-center">
+        <div class="card w-50 m-5">
+            <h5 class="card-header info-color text-secondary text-center py-4">
+                <strong>Add Testimonial</strong>
+            </h5>
 
-                <!--Card content-->
-                <div class="card-body px-lg-5 pt-0">
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
 
-                    <!-- Form -->
-                    <form class="text-center" method="post"  action="#!">
+                <!-- Form -->
+                <form class="text-center" method="post" action="#!">
 
-                        <!-- Name -->
-                        <div class="md-form mt-3">
-                            <label  name="name"  class="form-control" >
-                                <?= $first_name ?>
-                            </label>
-                        </div>
+                    <!-- Name -->
+                    <div class="md-form mt-3">
+                        <label name="name" class="form-control">
+                            <?= $first_name ?>
+                        </label>
+                    </div>
 
-                        <div class="md-form mt-3">
-                            <label  name="name"  class="form-control" >
-                                <?= date('m/d/Y') ?>
-                            </label>
-                        </div>
-                        <!-- Class Name -->
-                        <div class="md-form mt-3">
-                            <?= get_classes() ?>
-                        </div>
+                    <div class="md-form mt-3">
+                        <label name="name" class="form-control">
+                            <?= date('m/d/Y') ?>
+                        </label>
+                    </div>
+                    <!-- Class Name -->
+                    <div class="md-form mt-3">
+                        <?= get_classes() ?>
+                    </div>
 
-                        <!--Comment-->
-                        <div class="md-form mt-3">
-                            <textarea name="comment" placeholder="Comment"  class="form-control md-textarea" rows="3"></textarea>
-                        </div>
+                    <!--Comment-->
+                    <div class="md-form mt-3">
+                        <textarea name="comment" placeholder="Comment" class="form-control md-textarea"
+                                  rows="3"></textarea>
+                    </div>
 
-                        <!-- Send button -->
-                        <button class="btn btn-dark btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Submit</button>
+                    <!-- Send button -->
+                    <button class="btn btn-dark btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">
+                        Submit
+                    </button>
 
-                    </form>
-                    <!-- Form -->
+                </form>
+                <!-- Form -->
 
-                </div>
             </div>
         </div>
-
-
-
     </div>
+
+
+</div>
 
 
