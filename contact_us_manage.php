@@ -106,4 +106,3 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
 }
 
 
-include_once('footer.php');
