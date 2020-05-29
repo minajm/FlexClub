@@ -8,15 +8,15 @@ include_once('connect.php');
 <html lang="en">
 
 <head>
-    <!-- meta head-->
+    <!-- meta head will define from below-->
     <meta charset="utf-8">
     <meta name="description" content=" write the description ">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- title -->
+    <!-- Set the title as Flex club -->
     <title>Flex Club</title>
 
-    <!--file of CSS-->
+    <!--it is linked with the CSS file type -->
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
