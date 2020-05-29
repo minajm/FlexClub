@@ -25,9 +25,9 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>reviewer name</th>
-                            <th>review body</th>
-                            <th>Shown?</th>
+                            <th>Member name</th>
+                            <th>Text review</th>
+                            <th>Approved</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -38,17 +38,17 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
                         if (!is_null($result)) {
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
-                                    $shown = "";
+                                    $approved = "";
                                     if ($row["approved_by_admin"] == 1) {
-                                        $shown = "Yes";
+                                        $approved = "Yes";
                                     } else {
-                                        $shown = "NO";
+                                        $approved = "NO";
                                     }
                                     echo '<tr>
                                             <td>' . $row["id"] . '</td>
-                                            <td>' . $row["reviewer_name"] . '</td>
-                                            <td>' . $row["review_body"] . '</td>
-                                            <td>' . $shown . '</td>
+                                            <td>' . $row["first_name"] . '</td>
+                                            <td>' . $row["review"] . '</td>
+                                            <td>' . $approved . '</td>
                                         </tr>';
                                 }
                             }

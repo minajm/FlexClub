@@ -2,16 +2,16 @@
 include_once('header.php');
 ?>
     <div class="container">
-            <div class="row bg-light pb-5 pt-5 mb-5">
+        <div class="row bg-dark pb-5 pt-5 mb-5">
                 <div class="col text-center">
-                    <h2 class="text-dark">Testimonial</h2>
-                    <p class="text-secondary">In this page you can find customer review <br>
+                    <h2 class="text-light">Testimonial</h2>
+                    <p class="text-white-50">In this page you can find the Members review <br>
                         This is our pleasure to here your review about our classes, our trainers and this club
                     <br>If you are a member of this club you can add your opinion.</p>
                 </div>
             </div>
             <?php
-                $sql = "SELECT * FROM testimonial where approved_by_admin =1 order by id desc limit 2 ";
+                $sql = "SELECT * FROM testimonial where is_approved =1 order by id desc limit 6 ";
 
                 $result = mysqli_query($connection, $sql);
                 if ($result != false) {
@@ -19,9 +19,10 @@ include_once('header.php');
                         while ($row = $result->fetch_assoc()) {
                             ?>
                             <div class="Testimonial bg-light">
-                                <img src="./image/user.png" alt="Avatar" style="width:90px">
-                                <p class="card-text text-dark"><?php echo $row['reviewer_name'] ?></p>
-                                <p class="card-text"><small class="text-muted"><?php echo $row['review_body'] ?></small></p>
+                                <p class="card-text h5 text-dark">First Name</p>
+                                <p class="card-text  text-dark">Date</p>
+                                <p class="card-text  text-dark">Class anme</p>
+                                <p class="card-text"><small class="text-muted">Comment</small></p>
                             </div>
                             <?php
                         }
@@ -38,25 +39,16 @@ include_once('header.php');
 
                 }
                 ?>
-        <div class="card">
-            <div class="card-body">
-                <form method="get" action="testimonial_add.php">
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="rev_name" class="form-control" placeholder="Name">
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                                    <textarea name="rev_body" class="form-control"
-                                              placeholder="write a review here:"></textarea>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-dark btn-block">submit</button>
-                </form>
-            </div>
-        </div>
-        </div>
-    </div>
+<?php
+
+//if (isset($_SESSION['status']) && $_SESSION['status'] == 1 ) {
+
+    include_once('testimonial_add.php');
+
+//}
+
+?>
+
+
 <?php
 include_once('footer.php');
