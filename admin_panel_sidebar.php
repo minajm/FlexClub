@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-light" href="./admin_edit_class.php">
+                    <a class="nav-link text-light" href="./class_details_edit.php">
                         Classes
                     </a>
                 </li>

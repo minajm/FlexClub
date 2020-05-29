@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $connection->query('UPDATE home SET image="' . $photo . '" WHERE id = ' . $id . ';');
     }
 
-    echo "<script>window.location.replace(\"/FlexClub/admin_edit_class.php\");</script>";
+    echo "<script>window.location.replace(\"/FlexClub/class_details_edit.php\");</script>";
 }
 
 function renderForm($connection, $action, $id=null) {
@@ -115,7 +115,7 @@ function renderForm($connection, $action, $id=null) {
                         <?php echo "Count : " . $features_count; ?></span>
                 </h3>
 
-                <a class="text-decoration-none text-danger mb-3" href="./admin_edit_class.php?new">Add new Class</a>
+                <a class="text-decoration-none text-danger mb-3" href="./class_details_edit.php?new">Add new Class</a>
 
                 <br>
                 <?php
@@ -155,7 +155,7 @@ function renderForm($connection, $action, $id=null) {
                                             '. '<img width="100" height="100" src="' . $row['image'] . '" >' . '
                                             </td>
                                             <td>' . $row["link"] . '</td>
-                                            <td><a href="admin_edit_class.php?id=' . $row["id"] . '">Edit</a></td>
+                                            <td><a href="class_details_edit.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
                                 }
                             }
