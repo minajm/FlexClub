@@ -11,7 +11,7 @@ include_once('header.php');
                 </div>
             </div>
             <?php
-                $sql = "SELECT * FROM testimonial where is_approved =1 order by id desc limit 6 ";
+                $sql = "SELECT * FROM testimonial where is_approved=1 order by id desc limit 6 ";
 
                 $result = mysqli_query($connection, $sql);
                 if ($result != false) {
@@ -19,10 +19,13 @@ include_once('header.php');
                         while ($row = $result->fetch_assoc()) {
                             ?>
                             <div class="Testimonial bg-light">
-                                <p class="card-text h5 text-dark">First Name</p>
-                                <p class="card-text  text-dark">Date</p>
-                                <p class="card-text  text-dark">Class anme</p>
-                                <p class="card-text"><small class="text-muted">Comment</small></p>
+                                <p class="card-text h5 text-dark">First Name: <?= $row['first_name'] ?></p>
+                                <p class="card-text  text-dark">Date:  <?= date("Y/m/d", strtotime($row['date'])) ?></p>
+                                <p class="card-text  text-dark">Class name: <?= $row['class_name'] ?></p>
+                                <p class="card-text">
+                                    <b class="text-muted">Comment:</b><br>
+                                    <?= htmlspecialchars($row['comment']) ?>
+                                </p>
                             </div>
                             <?php
                         }

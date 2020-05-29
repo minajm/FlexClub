@@ -1,7 +1,20 @@
 <?php
 include_once('header.php');
-if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
-    ?>
+include "admin_panel_check.php";
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $state = $_POST['state'];
+    $testimonial_id = $_POST['id'];
+
+    $sql = "update testimonial set is_approved=" . $state . " where id='" . $testimonial_id . "'";
+    $result = mysqli_query($connection, $sql);    // object or null
+
+    if ($result != false) {
+        echo "<script>window.location.replace(window.location);</script>";
+        die();
+    }
+}
+?>
 
     <div class="container-fluid">
         <div class="row">
@@ -28,6 +41,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
                             <th>Member name</th>
                             <th>Text review</th>
                             <th>Approved</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -39,17 +53,32 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     $approved = "";
-                                    if ($row["approved_by_admin"] == 1) {
+                                    if ($row["is_approved"] == 1) {
                                         $approved = "Yes";
                                     } else {
                                         $approved = "NO";
                                     }
-                                    echo '<tr>
+
+                                    $txt = '<tr>
                                             <td>' . $row["id"] . '</td>
                                             <td>' . $row["first_name"] . '</td>
-                                            <td>' . $row["review"] . '</td>
-                                            <td>' . $approved . '</td>
-                                        </tr>';
+                                            <td>' . $row["comment"] . '</td>
+                                            <td>' . $approved . '</td>';
+
+                                    $txt .= '<td><form method="post">';
+                                    $txt .= '<input type="hidden" name="id" value="' . $row["id"] . '" />';
+
+                                    if ($row['is_approved'] == 1) {
+                                        $txt .= '<input type="hidden" name="state" value="0" />';
+                                        $txt .= '<button type="submit">Disapprove</button></td>';
+                                    } else if ($row['is_approved'] == 0) {
+                                        $txt .= '<input type="hidden" name="state" value="1" />';
+                                        $txt .= '<button type="submit">Approve</button></td>';
+                                    }
+
+                                    $txt .= '</form></td>';
+
+                                    echo $txt;
                                 }
                             }
                         }
@@ -105,7 +134,5 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
         </div>
     </div>
     <?php
-} else {
-    header('Location: http://localhost/HassanProject/login.php');
-}
+
 include_once('footer.php');
