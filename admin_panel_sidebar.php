@@ -18,7 +18,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-light " href="./admin_edit_fee.php">
+                    <a class="nav-link text-light " href="./registration_edit.php">
                         Registration Fee
                     </a>
                 </li>

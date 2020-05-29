@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $connection->query('UPDATE fee SET amount="' . $amount . '", name="' . $name . '", benefits="' . $benefits . '" WHERE id = ' . $id . ';');
     }
 
-    echo "<script>window.location.replace(\"/FlexClub/admin_edit_fee.php\");</script>";
+    echo "<script>window.location.replace(\"/FlexClub/registration_edit.php\");</script>";
 }
 
 function renderForm($connection, $action, $id=null) {
@@ -87,7 +87,7 @@ function renderForm($connection, $action, $id=null) {
                         <?php echo "Count : " . $features_count; ?></span>
                 </h3>
 
-                <a class="text-decoration-none text-danger" mb-3" href="./admin_edit_fee.php?new">
+                <a class="text-decoration-none text-danger" mb-3" href="./registration_edit.php?new">
                     Add new Fee
                 </a>
                 <br>
@@ -125,7 +125,7 @@ function renderForm($connection, $action, $id=null) {
                                             <td>' . $row["amount"] . '</td>
                                             <td>' . $row["name"] . '</td>
                                             <td>' . $row["benefits"] . '</td>
-                                            <td><a href="admin_edit_fee.php?id=' . $row["id"] . '">Edit</a></td>
+                                            <td><a href="registration_edit.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
                                 }
                             }
