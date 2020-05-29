@@ -80,7 +80,6 @@ include_once('connect.php');
                     session_start();
 
                     if (isset($_SESSION['status']) && $_SESSION['status'] == 1 && isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 0) {
-                        /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
                         echo '
                             <li class="nav-item">
                                 <a class="nav-link text-warning" href="./contact_us_manage.php" >My Comments</a>
@@ -89,7 +88,6 @@ include_once('connect.php');
                         ';
                     }
                     if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
-                        /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
                         echo '
    
                             <li class="nav-item">
@@ -107,6 +105,7 @@ include_once('connect.php');
                     }
 
                     if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { // admin
+
                         echo '
                         <li class="nav-item ml-3 bg-dark">
                                 <a class="nav-link text-light "  href="index_edit.php">ADMIN PANEL</a>

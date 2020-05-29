@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
 
-
+//request to server for getting the information of classes
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 <div class="container">
 
     <?php
-    if (isset($_SESSION['status']) && $_SESSION['status'] == 1) { // logged IN
+    if (isset($_SESSION['status']) && $_SESSION['status'] == 1) { // user is  logged IN or not
         echo '
         <div class="card mt-5 mb-5">
             <div class="row no-gutters">

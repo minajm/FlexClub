@@ -39,7 +39,7 @@ include_once('header.php');
                     </div>
                     <!--  Class footer which appear in white is defined in this class-->
                     <div class="card-footer bg-dark">
-
+                        <!--this part check if it is user so it can go to class detail but other wise it brought to log in page-->
                         <?php
                         if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
                             echo '

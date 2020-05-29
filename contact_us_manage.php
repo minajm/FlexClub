@@ -71,7 +71,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
                         $query .= " where user_id='" . $_SESSION['id'] . "'";
                     }
 
-                    $result = mysqli_query($connection, $query);    // object or null
+                    $result = mysqli_query($connection, $query);
 
                     if (!is_null($result)) {
                         if ($result->num_rows > 0) {
