@@ -70,7 +70,7 @@ function renderForm($connection, $action, $id=null) {
     <div class="container-fluid">
         <div class="row">
             <?php
-            include_once('admin_dashboard_panel.php');
+            include_once('admin_panel_sidebar.php');
             ?>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
