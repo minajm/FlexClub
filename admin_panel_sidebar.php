@@ -3,7 +3,7 @@
         <div class="sidebar-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="./admin_edit_index.php">
+                    <a class="nav-link text-light" href="./index_edit.php">
                         Index
                     </a>
                 </li>

@@ -108,7 +108,7 @@ include_once('connect.php');
                 if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1) { // admin
                     echo '
                         <li class="nav-item ml-3 bg-dark">
-                                <a class="nav-link text-light "  href="./admin_edit_index.php">ADMIN PANEL</a>
+                                <a class="nav-link text-light "  href="index_edit.php">ADMIN PANEL</a>
                         </li>
                     ';
                 }

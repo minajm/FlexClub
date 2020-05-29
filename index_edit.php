@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $connection->query('UPDATE home SET image="' . $photo . '" WHERE id = ' . $id . ';');
     }
 
-    echo "<script>window.location.replace(\"/FlexClub/admin_edit_index.php\");</script>";
+    echo "<script>window.location.replace(\"/FlexClub/index_edit.php\");</script>";
 }
 
 function renderForm($connection, $action, $id=null) {
@@ -121,7 +121,7 @@ function renderForm($connection, $action, $id=null) {
                         <?php echo "Count : " . $features_count; ?></span>
                 </h3>
 
-                <a class="text-decoration-none text-danger mb-3" href="./admin_edit_index.php?new">Add new feature box</a>
+                <a class="text-decoration-none text-danger mb-3" href="./index_edit.php?new">Add new feature box</a>
 
                 <br>
                 <?php
@@ -162,7 +162,7 @@ function renderForm($connection, $action, $id=null) {
                                             <td> 
                                             '. '<img width="100" height="100" src="' . $row['image'] . '" >' . '
                                             </td> 
-                                            <td><a href="admin_edit_index.php?id=' . $row["id"] . '">Edit</a></td>
+                                            <td><a href="index_edit.php?id=' . $row["id"] . '">Edit</a></td>
                                         </tr>';
                                 }
                             }
