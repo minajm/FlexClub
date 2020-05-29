@@ -1,6 +1,3 @@
-<!--student 1: Mina Jamshidian / Student Number: 3013827-->
-<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
-
 <?php
 include_once('header.php');
 function printForm()

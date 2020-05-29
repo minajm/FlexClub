@@ -1,6 +1,3 @@
-<!--student 1: Mina Jamshidian / Student Number: 3013827-->
-<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
-
 <?php
 include_once('connect.php');
 ?>
@@ -81,6 +78,7 @@ include_once('connect.php');
 
                     <?php
                     session_start();
+
                     if (isset($_SESSION['status']) && $_SESSION['status'] == 1 && isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 0) {
                         /* users can see their selves comments and admin can see all the comments the users put in contact Us page */
                         echo '

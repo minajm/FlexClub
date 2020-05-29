@@ -1,6 +1,3 @@
-<!--student 1: Mina Jamshidian / Student Number: 3013827-->
-<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
-
 <nav class="col-md-2  d-none d-md-block bg-dark sidebar ">
     <div class="sidebar-sticky">
         <ul class="nav flex-column">

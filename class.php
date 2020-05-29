@@ -1,7 +1,3 @@
-<!--student 1: Mina Jamshidian / Student Number: 3013827-->
-<!--student 2: Saad Bin Farhat  / Student Number:3013824 -->
-
-<!-- this is the header -->
 <?php
 
 include_once('header.php');

@@ -21,28 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6bf3811c-17f6-448a-a6ea-c0f337896f38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_edit_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_edit_users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_panel_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_panel_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_panel_sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_panel_sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class.php" beforeDir="false" afterPath="$PROJECT_DIR$/class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/class_details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_details_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/class_details_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_us_manage.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us_manage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/index_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/testimonial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testimonial_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/testimonial_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonial_manage.php" beforeDir="false" afterPath="$PROJECT_DIR$/testimonial_manage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainers.php" beforeDir="false" afterPath="$PROJECT_DIR$/trainers.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +106,7 @@
       <workItem from="1590178123852" duration="43983000" />
       <workItem from="1590430971327" duration="2918000" />
       <workItem from="1590517590362" duration="98229000" />
-      <workItem from="1590747468928" duration="12837000" />
+      <workItem from="1590747468928" duration="14421000" />
     </task>
     <servers />
   </component>
@@ -179,10 +160,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="326" y="102" key="#registration.php/0.0.1280.800@0.0.1280.800" timestamp="1590536233284" />
-    <state x="100" y="100" width="1080" height="600" key="DiffContextDialog" timestamp="1590589033911">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="100" y="120" width="1080" height="583" key="DiffContextDialog" timestamp="1590774952072">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="100" y="100" width="1080" height="600" key="DiffContextDialog/0.0.1280.800@0.0.1280.800" timestamp="1590589033911" />
+    <state x="100" y="120" width="1080" height="583" key="DiffContextDialog/0.23.1280.777@0.23.1280.777" timestamp="1590774952072" />
     <state width="832" height="184" key="GridCell.Tab.0.bottom" timestamp="1588946051990">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -237,9 +219,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="305" y="186" key="run.anything.popup/0.23.1280.777@0.23.1280.777" timestamp="1588946018043" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1590662089498">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="305" y="143" width="670" height="657" key="search.everywhere.popup" timestamp="1590776907126">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1590662089498" />
+    <state x="305" y="143" width="670" height="657" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1590776907126" />
   </component>
 </project>
