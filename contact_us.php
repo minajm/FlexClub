@@ -75,16 +75,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 ?>
 
     <div class="container ">
-        <div class="row bg-light pb-5 pt-5 mb-3">
+        <div class="row bg-dark pb-5 mt-3 pt-5 mb-5">
             <div class="col text-center">
-                <h2 class="text-dark">Contact Us</h2>
-                <p class="text-secondary">In this page you can find customer review <br>
-                    This is our pleasure to here your review about our classes, our trainers and this club
-                    <br>If you are a member of this club you can add your opinion.</p>
+                <h2 class="text-light">Contact Us</h2>
+                <p class="text-white-50">Need to get in touch with the Flex Club? We are all ears</p>
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <div class="card w-50 m-5">
+            <div class="card w-50 mt-2 mb-5">
                 <h5 class="card-header info-color text-secondary text-center py-4">
                     <strong>Contact us</strong>
                 </h5>

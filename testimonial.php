@@ -51,6 +51,7 @@ include_once('header.php');
 //}
 
 ?>
+    </div>
 
 
 <?php
