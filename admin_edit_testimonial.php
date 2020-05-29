@@ -86,50 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         </tbody>
                     </table>
                 </div>
+                
 
-
-                <hr>
-
-
-                <h2 class="text-center mt-2">Customer Reviews</h2>
-                <div class="Features" style="margin-top: 20px;">
-                    <div class="card-deck">
-                        <?php
-                        $sql = "SELECT * FROM testimonial where approved_by_admin =0 order by id desc";
-
-                        $result = mysqli_query($connection, $sql);
-                        if ($result != false) {
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    ?>
-                                    <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?php echo $row['reviewer_name'] ?></h5>
-                                        <p class="card-text"><?php echo $row['review_body'] ?></p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="http://localhost/hassanProject/testimonial_add_or_delete.php?aid=<?php echo $row['id'] ?>"
-                                           class="float-left">Approve</a>
-                                        <a href="http://localhost/hassanProject/testimonial_add_or_delete.php?did=<?php echo $row['id'] ?>"
-                                           class="text-danger float-right">Delete</a>
-                                    </div>
-                                    </div><?php
-                                }
-                            } else {
-                                // no testimonials
-                                echo '<div class="container">
-                            <h2>No reviews yet</h2>
-                        </div>';
-                            }
-                        } else {
-                            echo '<div class="container">
-                            <h2>No reviews yet</h2>
-                        </div>';
-
-                        }
-                        ?>
-                    </div>
-                </div>
             </main>
         </div>
     </div>
